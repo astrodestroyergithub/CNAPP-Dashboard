@@ -1,0 +1,47 @@
+import { createSlice } from '@reduxjs/toolkit';
+
+const slice = createSlice({
+  name: 'dashboard',
+  initialState: {
+    categories: [],
+    isModalOpen: false,
+    activeCategoryId: null,
+    globalSearch: ''
+  },
+  reducers: {
+    initialize(state, action){
+      const data = action.payload;
+      state.categories = data.categories.map(c=>({
+        ...c,
+        widgets: c.widgets.map(w=>({ ...w, active: (w.active ?? false) }))
+      }));
+    },
+    setModalOpen(state, action){
+      state.isModalOpen = action.payload.open;
+    },
+    setActiveCategory(state, action){
+      state.activeCategoryId = action.payload;
+    },
+    addWidgets(state, action){
+      const { categoryId, widgetIds } = action.payload;
+      const cat = state.categories.find(c=>c.id===categoryId);
+      if(!cat) return;
+      cat.widgets.forEach(w=>{
+        if(widgetIds.includes(w.id)){ w.active = true; }
+      });
+    },
+    removeWidget(state, action){
+      const { categoryId, widgetId } = action.payload;
+      const cat = state.categories.find(c=>c.id===categoryId);
+      if(!cat) return;
+      const w = cat.widgets.find(x=>x.id===widgetId);
+      if(w) w.active = false;
+    },
+    setGlobalSearch(state, action){
+      state.globalSearch = action.payload;
+    }
+  }
+});
+
+export const { initialize, setModalOpen, addWidgets, removeWidget, setActiveCategory, setGlobalSearch } = slice.actions;
+export default slice.reducer;
