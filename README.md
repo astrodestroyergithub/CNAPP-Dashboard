@@ -19,7 +19,11 @@ npm start
 **Notes:**
 - This project was generated using create-react-app scaffolding, and it uses the same react-scripts toolchain.
 - If you encounter an error about blocked ports, either close the existing process or set a different port:
+```
   set PORT=3001 && npm start   (Windows)
+```
+```
   PORT=3001 npm start          (macOS/Linux)
+```
 
 **View Live Website:** [CNAPP Dashboard](https://cnapp-dashboard-tamojit-roy.netlify.app/)
