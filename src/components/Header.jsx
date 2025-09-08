@@ -105,7 +105,7 @@ export default function Header({ onSearch }) {
 
 
                 <div className="profile-pill" title="Profile">
-                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden style={{marginRight: 8}}>
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden style={{marginRight: 8, color: "#616263"}}>
                         <circle cx="12" cy="8" r="3" fill="currentColor" />
                         <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="currentColor"/> 
                     </svg>
