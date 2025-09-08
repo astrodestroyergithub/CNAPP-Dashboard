@@ -4,6 +4,7 @@ const slice = createSlice({
   name: 'dashboard',
   initialState: {
     categories: [],
+    selectedOption: "Normal Mode",
     isModalOpen: false,
     activeCategoryId: null,
     globalSearch: ''
@@ -15,6 +16,12 @@ const slice = createSlice({
         ...c,
         widgets: c.widgets.map(w=>({ ...w, active: (w.active ?? false) }))
       }));
+    },
+    setCategories: (state, action) => {
+      state.categories = action.payload;
+    },
+    setSelectedOption: (state, action) => {
+      state.selectedOption = action.payload;
     },
     setModalOpen(state, action){
       state.isModalOpen = action.payload.open;
@@ -43,5 +50,5 @@ const slice = createSlice({
   }
 });
 
-export const { initialize, setModalOpen, addWidgets, removeWidget, setActiveCategory, setGlobalSearch } = slice.actions;
+export const { initialize, setCategories, setSelectedOption, setModalOpen, addWidgets, removeWidget, setActiveCategory, setGlobalSearch } = slice.actions;
 export default slice.reducer;
