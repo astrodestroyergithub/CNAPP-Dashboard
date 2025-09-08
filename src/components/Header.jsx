@@ -55,9 +55,7 @@ export default function Header({ onSearch }) {
             {/*centered search - absolutely centered so it stays visually centered */}
             <div className="search-centered" aria-hidden="false">
                 <div className="search-wrap" role="search">
-                    {/* search icon */}
                     <svg className="icon search" viewBox="0 0 24 24" width="18" height="18" aria hidden>
-                        {/* <path fill="currentColor" d="M21 20l-4.35-4.35a7 7 0 10-1.06 1.06L20 21zM5 10a5 5 0 1110 0 5 5 0 01-10 0z"/> */}
                         <path
                             d="M21 21l-4.35-4.35m1.44-5.4a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"
                             fill="none"
@@ -83,7 +81,7 @@ export default function Header({ onSearch }) {
             </div>
 
             <div className="header-right">
-                {/* <div className="icon-btn dropdown-box">
+                <div className="icon-btn dropdown-box">
                     <select
                      className="dropdown-select"
                      value={selectedOption}
@@ -92,7 +90,7 @@ export default function Header({ onSearch }) {
                         <option value="Normal Mode">Normal Mode</option>
                         <option value="Advanced Mode">Advanced Mode</option>
                     </select>
-                </div> */}
+                </div>
 
                 <button className="icon-btn">
                     <svg className="notification-bell" viewBox="0 0 24 24" width="18" height="18" aria hidden>
