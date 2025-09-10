@@ -18,8 +18,8 @@ const LABEL_MAP = {
 const RiskAssessmentDonutGraph = ({ data }) => {
   const total = Object.values(data).reduce((sum, val) => sum + val, 0);
 
-  const radius = 45;
-  const strokeWidth = 10;
+  const radius = 60;
+  const strokeWidth = 20;
   const normalizedRadius = radius - strokeWidth / 2;
   const circumference = 2 * Math.PI * normalizedRadius;
 

@@ -6,8 +6,8 @@ const CloudAccountsDonutGraph = ({ data }) => {
   const notConnected = data['not-connected'] || 0;
   const total = data.total || connected + notConnected;
 
-  const radius = 45;
-  const strokeWidth = 10;
+  const radius = 60;
+  const strokeWidth = 20;
   const normalizedRadius = radius - strokeWidth / 2;
   const circumference = 2 * Math.PI * normalizedRadius;
   const connectedPercentage = total > 0 ? connected / total : 0;
