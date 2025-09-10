@@ -37,15 +37,21 @@
           "id": "w3",
           "name": "Top 5 Namespace Specific Alerts",
           "type": "bar-chart",
-          "data": "No Graph data available",
-          "active": false
+          "data": { 
+            "Memory Usage": 762, 
+            "Memory Quota Overcommit": 345, 
+            "KubeContainerOOMKilledCount": 976, 
+            "Missing Pod Replicas": 283, 
+            "Pod Restart Rate": 566
+          },
+          "active": true
         },
         {
           "id": "w4",
           "name": "Workload Alerts",
           "type": "bar-chart",
           "data": "No Graph data available",
-          "active": false
+          "active": true
         }
       ]
     },
@@ -56,16 +62,16 @@
         {
           "id": "w5",
           "name": "Image Risk Assessment",
-          "type": "bar-chart",
-          "data": "Random - Placeholder",
-          "active": false
+          "type": "stacked-bar-chart",
+          "data": "No data available",
+          "active": true
         },
         {
           "id": "w6",
           "name": "Image Security Issues",
-          "type": "bar-chart",
-          "data": "Random - Placeholder",
-          "active": false
+          "type": "stacked-bar-chart",
+          "data": "No data available",
+          "active": true
         }
       ]
     }
