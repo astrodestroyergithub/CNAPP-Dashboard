@@ -16,7 +16,7 @@ export default function App(){
       <Header />
       <div className="container">
         <div className="header">
-          <h1>Backboard RFP</h1>
+          <h1>CNAPP Dashboard</h1>
           <div className="spacer" />
           <div className="search">
             <SearchBar value={globalSearch} onChange={(v)=>dispatch(setGlobalSearch(v))} />

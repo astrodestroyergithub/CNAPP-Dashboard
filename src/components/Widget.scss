@@ -1,0 +1,50 @@
+.stocks-icon {
+  width: 64px;
+  height: 64px;
+  color: #ccc; /* Light monochrome */
+}
+
+.stocks-bar {
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+// .zigzag-line {
+//   fill: none;
+//   stroke: currentColor;
+//   stroke-width: 2;
+//   stroke-linejoin: round;
+//   stroke-linecap: round;
+// }
+
+// .arrow-tip {
+//   fill: currentColor;
+//   stroke: none;
+// }
+
+.no-bar-chart {
+    display: flex;
+    padding: 1.25rem 0 1.75rem 8.4em;
+}
+
+$bar-color: #ccc; // Light monochrome shade
+$stroke-width: 1.5;
+
+.stacked-horizontal-bar-icon {
+  width: 64px;
+  height: 16px;
+  stroke: $bar-color;
+  fill: none;
+}
+
+.bar-segment rect {
+  stroke: $bar-color;
+  stroke-width: $stroke-width;
+  fill: none;
+}
+
+.no-stacked-bar-chart {
+    display: flex;
+    padding: 3rem 0 3rem 8.4em;
+}
