@@ -50,7 +50,7 @@
           "id": "w4",
           "name": "Workload Alerts",
           "type": "bar-chart",
-          "data": "No data available",
+          "data": "No Graph data available!",
           "active": true
         }
       ]
