@@ -102,7 +102,7 @@ export default function Widget({widget, categoryId}){
                   }</div>
               </span>
               </> : <div>
-                  <StackedBarChart data={widget.data} />
+                  <StackedBarChart data={widget.data} registry={widget.name} />
               </div>}
             </>)
         }</> }

@@ -76,7 +76,13 @@
           "id": "w6",
           "name": "Image Security Issues",
           "type": "stacked-bar-chart",
-          "data": "No data available",
+          "data": {
+            "Critical": 2,
+            "High": 2,
+            "Minor": 2,
+            "Low": 1,
+            "No issues": 1
+          },
           "active": true
         }
       ]

@@ -10,12 +10,15 @@ const COLORS = {
   'No issues': '#c2c2c2',
 };
 
-const StackedBarChart = ({ data }) => {
+const StackedBarChart = ({ data, registry }) => {
   const total = Object.values(data).reduce((sum, val) => sum + val, 0);
 
   return (
     <div className="stacked-bar-container">
-      <div className="total-count">{total} Total Vulnerabilities</div>
+      {registry === 'Image Risk Assessment' ? (
+        <div className="total-count">{total} Total Vulnerabilities</div>) : (
+          <div className="total-count">{total} Total Images</div>
+      )}
       <div className="bar">
         {Object.entries(data).map(([key, value]) => {
           const width = total > 0 ? (value / total) * 100 : 0;

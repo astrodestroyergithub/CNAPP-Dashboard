@@ -1,0 +1,96 @@
+.toolbar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 3px;
+  border-radius: 8px;
+  // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  // background-color: #fff;
+  font-family: Arial, sans-serif;
+  // border: 1px solid #e0e2e5;
+
+  .toolbar-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .add-widget {
+    background-color: #f1f3f4;
+    color: #333;
+
+    .icon {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      background-color: #e0e2e5;
+    }
+  }
+
+  .icon-only-button {
+    background-color: transparent;
+    border: 1px solid #e0e2e5;
+    color: #555;
+    padding: 8px;
+    width: 38px;
+    justify-content: center;
+
+    .icon {
+      font-size: 16px;
+      color: #777;
+    }
+
+    &:hover {
+      background-color: #f1f3f4;
+    }
+  }
+
+  .divider {
+    width: 1px;
+    height: 25px;
+    background-color: #e0e2e5;
+  }
+
+  .dropdown-container {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #0056b3;
+    background-color: #e3f2fd;
+
+    .clock-icon {
+      color: #0056b3;
+      margin-right: 10px;
+    }
+    
+    .vertical-divider {
+      width: 1px;
+      height: 20px;
+      background-color: #0056b3;
+      margin-right: 10px;
+    }
+
+    .dropdown {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border: none;
+      background-color: transparent;
+      font-size: 14px;
+      color: #0056b3;
+      cursor: pointer;
+      padding-right: 20px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%230056b3" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+  }
+}
