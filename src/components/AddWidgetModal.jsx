@@ -24,42 +24,33 @@ export default function AddWidgetModal(){
 
   // Function to add a new widget to the correct category
   function addNewWidget(tab, newWidgetObj, categories) {
-    // Parse the categories if it's a JSON string (this ensures the data is an object)
     if (typeof categories === 'string') {
-      categories = JSON.parse(categories); // Parse if it's a string
+      categories = JSON.parse(categories);
     }
-
     // Find the category based on the tab value
     const categoryIndex = categories.findIndex(cat => cat.id === tab);
-
     // If the category is found, add the new widget to the widgets array
     if (categoryIndex !== -1) {
       // Create a copy of the widgets array and add the new widget
       const updatedWidgets = [...categories[categoryIndex].widgets, newWidgetObj];
-
       // Create a new category object with the updated widgets array
       const updatedCategory = {
         ...categories[categoryIndex],
         widgets: updatedWidgets
       };
-
       // Create a new categories array with the updated category
       const updatedCategories = [
         ...categories.slice(0, categoryIndex),
         updatedCategory,
         ...categories.slice(categoryIndex + 1)
       ];
-
       // Dispatch the updated categories 
       dispatch(setCategories(updatedCategories)); 
-
-      return updatedCategories; 
     }
-
-    return categories; // Return unchanged categories if no matching category found
   }
 
   const onClose = ()=>dispatch(setModalOpen({open:false}));
+
   const onConfirm = ()=>{
     const selectedIds = (filtered[tab] || []).filter(w=>w._selected || w.active).map(w=>w.id);
     const newWidgetId = "w" + (parseInt(latestWidgetId.slice(1), 10) + 1);
@@ -67,7 +58,7 @@ export default function AddWidgetModal(){
     selectedIds.push(newWidgetId);
     dispatch(addWidgets({categoryId: tab, widgetIds: selectedIds}));
     dispatch(setActiveCategory(null));
-
+    // Creating the object for the new widget
     const newWidgetObj = {
       "id": newWidgetId,
       "name": addWidgetName,
@@ -75,15 +66,44 @@ export default function AddWidgetModal(){
       "data": "No Graph data available!",
       "active": true
     };
-
-    const updatedCategories = addNewWidget(tab, newWidgetObj, categories);
-
+    // Category list containing all the widgets including the recently added one
+    addNewWidget(tab, newWidgetObj, categories);
     onClose();
   };
-  
-  const handleRemoveWidget = (v) => {
-    
+
+  const handleRemoveWidget = (w,c) => {
+    if(!c) {
+      removeWidget(w.id, categories);
+    }
   };
+
+  // Function to remove a widget from the correct category by id
+  function removeWidget(removeWidgetId, categories) {
+    if (typeof categories === 'string') {
+      categories = JSON.parse(categories); 
+    }
+    // Find the category index containing the widget to be removed
+    const categoryIndex = categories.findIndex(cat => 
+      cat.widgets.some(widget => widget.id === removeWidgetId)
+    );
+    // If the category is found, remove the widget from the widgets array
+    if (categoryIndex !== -1) {
+      // Filter out the widget with the specified id from the widgets array
+      const updatedWidgets = categories[categoryIndex].widgets.filter(widget => widget.id !== removeWidgetId);
+      // Create a new category object with the updated widgets array
+      const updatedCategory = {
+        ...categories[categoryIndex],
+        widgets: updatedWidgets
+      };
+      // Create a new categories array with the updated category
+      const updatedCategories = [
+        ...categories.slice(0, categoryIndex),
+        updatedCategory,
+        ...categories.slice(categoryIndex + 1)
+      ];
+      dispatch(setCategories(updatedCategories)); 
+    }
+  }
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
@@ -112,7 +132,7 @@ export default function AddWidgetModal(){
               <input
                 type="checkbox"
                 checked={!!w.active}
-                onChange={e=>{ w.active = e.target.checked; }}
+                onChange={e=>{handleRemoveWidget(w, e.target.checked)}}
               />
             </div>
           ))}
