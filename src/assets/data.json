@@ -10,7 +10,7 @@
           "type": "donut-chart",
           "data": {
             "connected": 2,
-            "disconnected": 1,
+            "not-connected": 1,
             "total": 3
           },
           "active": true
@@ -20,10 +20,10 @@
           "name": "Cloud Account Risk Assessment",
           "type": "donut-chart",
           "data": {
-            "critical": 9830,
-            "high": 666,
-            "medium": 152,
-            "low": 1283
+            "failed": 585,
+            "warning": 62,
+            "not-available": 36,
+            "passed": 7253
           },
           "active": true
         }
