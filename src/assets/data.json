@@ -86,6 +86,30 @@
           "active": true
         }
       ]
+    },
+    {
+      "id": "c4",
+      "name": "Ticket",
+      "widgets": [
+        {
+          "id": "w7",
+          "name": "Ticket 1",
+          "type": "random-text",
+          "data": "No Graph data available!",
+          "active": true
+        },
+        {
+          "id": "w8",
+          "name": "Ticket 2",
+          "type": "random-text",
+          "data": {
+            "a": 1,
+            "b": 5,
+            "c": 2
+          },
+          "active": true
+        }
+      ]
     }
   ]
 }

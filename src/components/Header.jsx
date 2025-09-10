@@ -52,7 +52,7 @@ export default function Header({ onSearch }) {
                 <div className="brand">Dashboard V2</div>
             </div>
 
-            {/*centered search - absolutely centered so it stays visually centered */}
+            {/* centered search - absolutely centered so it stays visually centered */}
             <div className="search-centered" aria-hidden="false">
                 <div className="search-wrap" role="search">
                     <svg className="icon search" viewBox="0 0 24 24" width="18" height="18" aria hidden>
