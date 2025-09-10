@@ -1,4 +1,3 @@
-// StackedBarChart.jsx
 import React from 'react';
 import './StackedBarChart.scss';
 
