@@ -2,12 +2,14 @@ import React, { useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setModalOpen, addWidgets, setActiveCategory } from '../store/dashboardSlice';
 import SearchBar from './SearchBar';
+import AddWidgetBar from './AddWidgetBar';
 
 export default function AddWidgetModal(){
   const dispatch = useDispatch();
   const { categories, activeCategoryId, globalSearch } = useSelector(s=>s.dashboard);
   const [localSearch, setLocalSearch] = useState(globalSearch || '');
   const [tab, setTab] = useState(activeCategoryId || categories[0]?.id);
+  const [addWidgetName, setAddWidgetName] = useState(null);
 
   const tabs = categories.map(c=>({id:c.id, name:c.name}));
 
@@ -64,9 +66,12 @@ export default function AddWidgetModal(){
           )}
         </div>
 
+        {/* This is for entering the name of the new widget to be added */}
+        <AddWidgetBar value={addWidgetName} onChange={setAddWidgetName} />
+
         <div className="modal-footer">
           <button className="link-like" onClick={onClose}>Cancel</button>
-          <button className="btn primary" onClick={onConfirm}>Confirm</button>
+          <button style={{width: "7.8rem"}} className="btn primary" onClick={onConfirm}>Confirm</button>
         </div>
       </div>
     </div>
