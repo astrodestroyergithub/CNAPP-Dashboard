@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { removeWidget } from '../store/dashboardSlice';
 // import BarGraphWithLegend from './BarGraphWithLegend';
 import BarChart from './BarChart';
+import StackedBarChart from './StackedBarChart';
 import './Widget.scss';
 
 export default function Widget({widget, categoryId}){
@@ -23,7 +24,7 @@ export default function Widget({widget, categoryId}){
         widget.type === 'bar-chart' ? (
           <>{typeof widget.data === 'string' ? 
             <>
-                <span className="no-bar-chart">
+                <span style={{marginTop: "2em"}} className="no-bar-chart">
                   <svg
                     className="stocks-icon"
                     viewBox="0 0 64 64"
@@ -42,7 +43,7 @@ export default function Widget({widget, categoryId}){
                     <circle cx="52" cy="10" r="2" className="arrow-tip" /> */}
                   </svg>
                 </span>
-                <div className="small">{
+                <div style={{marginTop: "1.8em"}} className="small">{
                   typeof widget.data === 'string' ? widget.data : 'Random value: ' + Math.floor(Math.random()*1000)
                 }</div>
             </> : <>
@@ -50,31 +51,38 @@ export default function Widget({widget, categoryId}){
                 <BarChart data={widget?.data}/>
             </>} 
           </>
-        ) : <span>
-              <div className="no-stacked-bar-chart">
-                <svg
-                  className="stacked-horizontal-bar-icon"
-                  viewBox="0 0 64 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g className="bar-segment">
-                    <rect x="2" y="4" width="12" height="8" />
-                  </g>
-                  <g className="bar-segment">
-                    <rect x="14" y="4" width="16" height="8" />
-                  </g>
-                  <g className="bar-segment">
-                    <rect x="30" y="4" width="10" height="8" />
-                  </g>
-                  <g className="bar-segment">
-                    <rect x="40" y="4" width="18" height="8" />
-                  </g>
-                </svg>
-              </div>
-              <div className="small">{
-                typeof widget.data === 'string' ? widget.data : 'Random value: ' + Math.floor(Math.random()*1000)
-              }</div>
-          </span>
+        ) : (<>
+              {typeof widget.data === 'string' ? 
+              <>
+                <span>
+                  <div className="no-stacked-bar-chart">
+                    <svg
+                      className="stacked-horizontal-bar-icon"
+                      viewBox="0 0 64 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g className="bar-segment">
+                        <rect x="2" y="4" width="12" height="8" />
+                      </g>
+                      <g className="bar-segment">
+                        <rect x="14" y="4" width="16" height="8" />
+                      </g>
+                      <g className="bar-segment">
+                        <rect x="30" y="4" width="10" height="8" />
+                      </g>
+                      <g className="bar-segment">
+                        <rect x="40" y="4" width="18" height="8" />
+                      </g>
+                    </svg>
+                  </div>
+                  <div className="small">{
+                    typeof widget.data === 'string' ? widget.data : 'Random value: ' + Math.floor(Math.random()*1000)
+                  }</div>
+              </span>
+              </> : <div>
+                  <StackedBarChart data={widget.data} />
+              </div>}
+            </>)
         }</> }
     </div>
   );
