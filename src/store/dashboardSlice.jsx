@@ -7,14 +7,15 @@ const slice = createSlice({
     selectedOption: "Normal Mode",
     isModalOpen: false,
     activeCategoryId: null,
-    globalSearch: ''
+    globalSearch: '',
+    latestWidgetId: 'w8',
   },
   reducers: {
     initialize(state, action){
       const data = action.payload;
       state.categories = data.categories.map(c=>({
         ...c,
-        widgets: c.widgets.map(w=>({ ...w, active: (w.active ?? false) }))
+        widgets: c.widgets.map(w=>({ ...w, active: (w.active ? true : false) }))
       }));
     },
     setCategories: (state, action) => {
@@ -46,9 +47,12 @@ const slice = createSlice({
     },
     setGlobalSearch(state, action){
       state.globalSearch = action.payload;
+    },
+    setLatestWidgetId(state, action){
+      state.latestWidgetId = action.payload;
     }
   }
 });
 
-export const { initialize, setCategories, setSelectedOption, setModalOpen, addWidgets, removeWidget, setActiveCategory, setGlobalSearch } = slice.actions;
+export const { initialize, setCategories, setLatestWidgetId, setSelectedOption, setModalOpen, addWidgets, removeWidget, setActiveCategory, setGlobalSearch } = slice.actions;
 export default slice.reducer;
