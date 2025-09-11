@@ -107,7 +107,7 @@ export default function Header({ onSearch }) {
                         <circle cx="12" cy="8" r="3" fill="currentColor" />
                         <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="currentColor"/> 
                     </svg>
-                    John Doe
+                    TR
                 </div>
             </div>
         </header>
