@@ -43,7 +43,7 @@ const CloudAccountsDonutGraph = ({ data }) => {
           strokeLinecap="butt"
         />
         <text x="50%" y="50%" textAnchor="middle" dy=".3em" className="donut-text">
-          <tspan className="donut-value">{connected}</tspan>
+          <tspan className="donut-value">{total}</tspan>
           <tspan className="donut-label" x="50%" dy="1.2em">Total</tspan>
         </text>
       </svg>
