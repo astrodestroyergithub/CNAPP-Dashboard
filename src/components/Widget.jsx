@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { removeWidget } from '../store/dashboardSlice';
-// import BarGraphWithLegend from './BarGraphWithLegend';
 import BarChart from './BarChart';
 import StackedBarChart from './StackedBarChart';
 import CloudAccountsDonutGraph from './CloudAccountsDonutGraph';
