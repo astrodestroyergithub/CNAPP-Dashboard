@@ -1,4 +1,3 @@
-import React from 'react';
 import './AddWidgetBar.scss';
 
 export default function AddWidgetBar({ value, onChange }) {
