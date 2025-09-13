@@ -9,6 +9,7 @@ export default function Header({ onSearch }) {
     
     const dispatch = useDispatch();
     const selectedOption = useSelector((state) => state.dashboard.selectedOption);
+    const { isModalOpen } = useSelector((state) => state.dashboard);
 
     const handleChange = (e) => {
         dispatch(setSelectedOption(e.target.value));
@@ -28,7 +29,7 @@ export default function Header({ onSearch }) {
     };
 
     return (
-        <header className={`app-header ${scrolled ? "scrolled" : ""}`}>
+        !isModalOpen && <header className={`app-header ${scrolled ? "scrolled" : ""}`}>
             <div className="header-left">
                 {/* <span className="status-dot" aria-hidden="true" /> */}
                 <div className="sticky-bar-home">Home</div>
