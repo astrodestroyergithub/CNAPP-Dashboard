@@ -146,7 +146,7 @@ export default function AddWidgetModal(){
 
         <div className="modal-footer">
           <button className="link-like" onClick={onClose}>Cancel</button>
-          <button style={{width: "7.8rem"}} className="btn primary" onClick={onConfirm}>Confirm</button>
+          <button className="btn primary" onClick={onConfirm}>Confirm</button>
         </div>
       </div>
     </div>

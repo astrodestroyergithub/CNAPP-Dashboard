@@ -29,7 +29,7 @@ export default function App(){
         </div>
         <Dashboard />
         {isModalOpen && <AddWidgetModal />}
-        <button className="btn primary add-floating" onClick={()=>dispatch(setModalOpen({open:true}))}>＋</button>
+        {!isModalOpen && <button className="btn primary add-floating" onClick={()=>dispatch(setModalOpen({open:true}))}>＋</button>}
       </div>
     </>
   );
