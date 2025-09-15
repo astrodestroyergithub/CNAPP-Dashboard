@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setModalOpen, addWidgets, removeWidget, setActiveCategory, setLatestWidgetId, setCategories } from '../store/dashboardSlice';
 import SearchBar from './SearchBar';
