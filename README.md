@@ -30,7 +30,7 @@ npm list --depth=0
 ```
 npm start
 ```
-. The application will open automatically in your default browser at [http://localhost:3000](http://localhost:3000)
+The application will open automatically in your default browser at [http://localhost:3000](http://localhost:3000)
 
 **Notes:**
 - This project was generated using create-react-app scaffolding, and it uses the same react-scripts toolchain.
