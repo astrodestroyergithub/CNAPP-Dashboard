@@ -1,4 +1,3 @@
-import React from 'react';
 import './CloudAccountsDonutGraph.scss';
 
 const CloudAccountsDonutGraph = ({ data }) => {
