@@ -1,4 +1,3 @@
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Widget from './Widget';
 import { setModalOpen, setActiveCategory } from '../store/dashboardSlice';
