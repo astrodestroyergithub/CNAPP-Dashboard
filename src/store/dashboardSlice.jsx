@@ -9,6 +9,7 @@ const slice = createSlice({
     activeCategoryId: null,
     globalSearch: '',
     latestWidgetId: 'w8',
+    isKebabMenuBoxOpen: false
   },
   reducers: {
     initialize(state, action){
@@ -50,9 +51,12 @@ const slice = createSlice({
     },
     setLatestWidgetId(state, action){
       state.latestWidgetId = action.payload;
+    },
+    setKebabMenuBoxState(state, action) {
+      state.isKebabMenuBoxOpen = action.payload;
     }
   }
 });
 
-export const { initialize, setCategories, setLatestWidgetId, setSelectedOption, setModalOpen, addWidgets, removeWidget, setActiveCategory, setGlobalSearch } = slice.actions;
+export const { initialize, setCategories, setLatestWidgetId, setSelectedOption, setModalOpen, addWidgets, removeWidget, setActiveCategory, setGlobalSearch, setKebabMenuBoxState } = slice.actions;
 export default slice.reducer;
