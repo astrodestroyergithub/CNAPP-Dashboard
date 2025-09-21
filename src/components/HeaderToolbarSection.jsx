@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import './HeaderToolbarSection.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { setModalOpen } from '../store/dashboardSlice';
+import ThreeDotMenu from './ThreeDotMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faSyncAlt, faClock, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faSyncAlt, faClock } from '@fortawesome/free-solid-svg-icons';
 
 const HeaderToolbarSection = () => {
   const dispatch = useDispatch();
@@ -35,9 +36,11 @@ const HeaderToolbarSection = () => {
         <FontAwesomeIcon icon={faSyncAlt} className="icon refresh-icon" />
       </button>
 
-      <button className="toolbar-button icon-only-button">
+      {/* <button onClick={handleKebabIconClick} className="toolbar-button icon-only-button">
         <FontAwesomeIcon icon={faEllipsisV} className="icon" />
-      </button>
+      </button> */}
+
+      <ThreeDotMenu />
 
       {/* <div className="divider"></div> */}
 
