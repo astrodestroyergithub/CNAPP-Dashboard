@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import data from './assets/data.json';
 import Dashboard from './components/Dashboard';
 import AddWidgetModal from './components/AddWidgetModal';
-import SearchBar from './components/SearchBar';
 import Header from './components/Header';
 import HeaderToolbarSection from './components/HeaderToolbarSection';
 import { initialize, setGlobalSearch, setModalOpen } from './store/dashboardSlice';
