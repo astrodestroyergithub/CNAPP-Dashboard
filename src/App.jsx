@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import AddWidgetModal from './components/AddWidgetModal';
 import Header from './components/Header';
 import HeaderToolbarSection from './components/HeaderToolbarSection';
+import Footer from './components/Footer';
 import { initialize, setGlobalSearch, setModalOpen } from './store/dashboardSlice';
 
 export default function App(){
@@ -25,6 +26,7 @@ export default function App(){
         {isModalOpen && <AddWidgetModal />}
         {!isModalOpen && <button className="btn primary add-floating" onClick={()=>dispatch(setModalOpen({open:true}))}>＋</button>}
       </div>
+      <Footer />
     </>
   );
 }
