@@ -20,11 +20,6 @@ export default function App(){
           <div style={{marginLeft: "auto"}}>
             <HeaderToolbarSection />
           </div>
-          {/* <div className="spacer" />
-          <div className="search">
-            <SearchBar value={globalSearch} onChange={(v)=>dispatch(setGlobalSearch(v))} />
-          </div>
-          <button className="btn primary" onClick={()=>dispatch(setModalOpen({open:true}))}>Add Widget</button> */}
         </div>
         <Dashboard />
         {isModalOpen && <AddWidgetModal />}
