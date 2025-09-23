@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setSelectedOption } from "../store/dashboardSlice";
 import "./Header.scss";
 
-export default function Header({ onSearch }) {
+export default function Header({ onSearch, pageName }) {
     const [query, setQuery] = useState("");
     const [scrolled, setScrolled] = useState(false);
     
@@ -50,7 +50,7 @@ export default function Header({ onSearch }) {
                 >
                     <path d="M6 4l4 4-4 4" />
                 </svg>
-                <div className="brand">Dashboard V2</div>
+                <div className="brand">{pageName}</div>
             </div>
 
             {/* centered search - absolutely centered so it stays visually centered */}

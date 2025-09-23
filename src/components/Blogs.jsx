@@ -5,7 +5,7 @@ import Footer from './Footer'
 const Blogs = () => {
   return (
     <>
-      <Header/>
+      <Header pageName={'Blogs'} />
       <div>Blogs</div>
       <Footer/>
     </>

@@ -13,7 +13,7 @@ const CNAPPDashboard = () => {
     const { isModalOpen, globalSearch } = useSelector((state) => state.dashboard)
     return (
         <>
-            <Header/>
+            <Header pageName={'Dashboard V2'} />
             <div className="container">
                 <div style={{display: "flex"}} className="header">
                     <h1>CNAPP Dashboard</h1>
