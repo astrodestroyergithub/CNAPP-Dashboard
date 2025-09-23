@@ -41,15 +41,10 @@ const ThreeDotMenu = () => {
 
         {/* Menu box */}
         {isKebabMenuBoxOpen && 
-            // <div ref={threeDotMenuRef} className="menu-box" onClick={(e) => e.stopPropagation()}>
-            //     <a href="#" className="menu-item">Portfolio</a>
-            //     <a href="#" className="menu-item">Blogs</a>
-            //     <a href="#" className="menu-item">Tips</a>
-            // </div>
             <div ref={threeDotMenuRef} className="menu-box" onClick={(e) => e.stopPropagation()}>
-                <Link to="/portfolio" className="menu-item">Portfolio</Link>
-                <Link to="/blogs" className="menu-item">Blogs</Link>
-                <Link to="/tips" className="menu-item">Tips</Link>
+                <Link to="/portfolio" onClick={()=>{dispatch(setKebabMenuBoxState(false))}} className="menu-item">Portfolio</Link>
+                <Link to="/blogs" onClick={()=>{dispatch(setKebabMenuBoxState(false))}} className="menu-item">Blogs</Link>
+                <Link to="/tips" onClick={()=>{dispatch(setKebabMenuBoxState(false))}} className="menu-item">Tips</Link>
             </div>
         }
     </div>
