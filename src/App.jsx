@@ -7,9 +7,16 @@ import CNAPPDashboard from './components/CNAPPDashboard';
 import Portfolio from './components/Portfolio';
 import Blogs from './components/Blogs';
 import Tips from './components/Tips';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
 
 export default function App(){
   const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home/>
+    },
     {
       path: "/dashboard-v2",
       element: <CNAPPDashboard/>
@@ -37,7 +44,6 @@ export default function App(){
   return (
     <>
       <RouterProvider router={router} />
-      {window.location.pathname === "/" ? <a href="/dashboard-v2">CNAPP Dashboard</a> : null}
     </>
   );
 }
