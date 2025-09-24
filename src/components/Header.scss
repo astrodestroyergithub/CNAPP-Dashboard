@@ -237,8 +237,18 @@ $text: #0f172a;
 }
 
 .sticky-bar-home {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.1px;
+
+  &.home-active {
+    color: #1a6bed;
+  }
+
+  &.not-home {
     color: #cdcfd1;
-    text-decoration: none;
+  }
 }
 
 .notification-bell {
