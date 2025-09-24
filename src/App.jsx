@@ -7,8 +7,6 @@ import CNAPPDashboard from './components/CNAPPDashboard';
 import Portfolio from './components/Portfolio';
 import Blogs from './components/Blogs';
 import Tips from './components/Tips';
-import Header from './components/Header';
-import Footer from './components/Footer';
 import Home from './components/Home';
 
 export default function App(){
@@ -18,7 +16,7 @@ export default function App(){
       element: <Home/>
     },
     {
-      path: "/dashboard-v2",
+      path: "/dashboard",
       element: <CNAPPDashboard/>
     },
     {

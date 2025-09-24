@@ -9,7 +9,7 @@ const Home = () => {
         <Header pageName={'Home'}/>
         <div>
             <p>Home</p>
-            <Link to="/dashboard-v2">CNAPP Dashboard</Link>
+            <Link to="/dashboard">CNAPP Dashboard</Link>
         </div>
         <Footer/>
     </>
