@@ -4,6 +4,7 @@ import './ThreeDotMenu.scss';
 import { setKebabMenuBoxState } from '../store/dashboardSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 const ThreeDotMenu = () => {
@@ -41,9 +42,9 @@ const ThreeDotMenu = () => {
         {/* Menu box */}
         {isKebabMenuBoxOpen && 
             <div ref={threeDotMenuRef} className="menu-box" onClick={(e) => e.stopPropagation()}>
-                <a href="#" className="menu-item">Portfolio</a>
-                <a href="#" className="menu-item">Blogs</a>
-                <a href="#" className="menu-item">Tips</a>
+                <Link to="/portfolio" onClick={()=>{dispatch(setKebabMenuBoxState(false))}} className="menu-item">Portfolio</Link>
+                <Link to="/blogs" onClick={()=>{dispatch(setKebabMenuBoxState(false))}} className="menu-item">Blogs</Link>
+                <Link to="/tips" onClick={()=>{dispatch(setKebabMenuBoxState(false))}} className="menu-item">Tips</Link>
             </div>
         }
     </div>
