@@ -4,7 +4,6 @@ import Footer from './Footer'
 import '../index.css'
 import HeaderToolbarSection from './HeaderToolbarSection'
 import Dashboard from './Dashboard'
-import AddWidgetBar from './AddWidgetBar'
 import { useSelector, useDispatch } from 'react-redux'
 import { setModalOpen } from '../store/dashboardSlice'
 
