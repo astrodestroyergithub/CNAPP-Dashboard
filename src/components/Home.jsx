@@ -2,6 +2,8 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
+import './Home.scss'
+import Logo from './Logo'
 
 const Home = () => {
   return (
@@ -9,9 +11,9 @@ const Home = () => {
         <Header pageName={'Home'}/>
         <div>
             <section className="section">
-              <div className='section-title'>Cross-Network Advanced Portfolio Platform</div>
-              <div className='grid'>
-                <p>Home</p>
+              <div className='section-title main-heading'>Cross-Network Advanced Portfolio Platform (CNAPP)</div>
+              <div className='grid home-svg'>
+                <Logo/>
               </div>
             </section>
             <Link to="/dashboard">CNAPP Dashboard</Link>
