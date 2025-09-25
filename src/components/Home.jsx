@@ -8,7 +8,12 @@ const Home = () => {
     <>
         <Header pageName={'Home'}/>
         <div>
-            <p>Home</p>
+            <section className="section">
+              <div className='section-title'>Cross-Network Advanced Portfolio Platform</div>
+              <div className='grid'>
+                <p>Home</p>
+              </div>
+            </section>
             <Link to="/dashboard">CNAPP Dashboard</Link>
         </div>
         <Footer/>
