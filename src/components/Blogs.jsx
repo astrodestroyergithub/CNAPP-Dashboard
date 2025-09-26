@@ -7,10 +7,12 @@ const Blogs = () => {
   return (
     <>
       <Header pageName={'Blogs'} />
-      <div>
-        <p>Blogs</p>
-        <Link to="/">Home</Link>
-      </div>
+      <section className="section">
+        <div>
+          <p>Blogs</p>
+          <Link to="/">Home</Link>
+        </div>
+      </section>
       <Footer/>
     </>
   )
