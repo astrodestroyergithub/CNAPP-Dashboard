@@ -8,7 +8,7 @@ import { setModalOpen } from '../store/dashboardSlice'
 
 const CNAPPDashboard = () => {
     const dispatch = useDispatch()
-    const { isModalOpen, globalSearch } = useSelector((state) => state.dashboard)
+    const { isModalOpen } = useSelector((state) => state.dashboard)
     return (
         <>
             <Header pageName={'Dashboard V2'} />
