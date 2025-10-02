@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './HeaderToolbarSection.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { setModalOpen } from '../store/dashboardSlice';
