@@ -4,6 +4,7 @@ import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import './Home.scss'
 import Logo from './Logo'
+import Chatbot from './chatbot/Chatbot'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
               </div>
             </section>
             <Link to="/dashboard">CNAPP Dashboard</Link>
+            <Chatbot/>
         </div>
         <Footer/>
     </>
