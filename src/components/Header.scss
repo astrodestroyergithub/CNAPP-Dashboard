@@ -181,18 +181,18 @@ $text: #0f172a;
         }
     }
 
-    // .profile-pill {
-    //   display: inline-flex;
-    //   align-items: center;
-    //   gap: 6px;
-    //   padding: 8px 12px;
-    //   border-radius: 999px;
-    //   border: 1px solid #e6eefc;
-    //   font-weight: 600;
-    //   font-size: .8em;
-    //   color: $text;
-    //   background: linear-gradient(180deg,#ffffff,#fbfdff);
-    // }
+    .profile-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid #e6eefc;
+      font-weight: 600;
+      font-size: .8em;
+      color: $text;
+      background: linear-gradient(180deg,#ffffff,#fbfdff);
+    }
   }
 }
 
