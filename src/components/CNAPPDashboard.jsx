@@ -5,6 +5,7 @@ import HeaderToolbarSection from './HeaderToolbarSection'
 import Dashboard from './Dashboard'
 import { useSelector, useDispatch } from 'react-redux'
 import { setModalOpen } from '../store/dashboardSlice'
+import AddWidgetModal from './AddWidgetModal'
 
 const CNAPPDashboard = () => {
     const dispatch = useDispatch()
