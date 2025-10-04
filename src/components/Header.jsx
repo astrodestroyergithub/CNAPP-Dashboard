@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setSelectedOption } from "../store/dashboardSlice";
 import "./Header.scss";
 import { Link } from "react-router-dom";
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
 export default function Header({ onSearch, pageName }) {
     const [query, setQuery] = useState("");
@@ -97,12 +98,13 @@ export default function Header({ onSearch, pageName }) {
                 </div>
 
                 <button className="icon-btn">
-                    <svg className="notification-bell" viewBox="0 0 24 24" width="18" height="18" aria hidden>
+                    {/* <svg className="notification-bell" viewBox="0 0 24 24" width="18" height="18" aria hidden>
                         <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" fill="currentColor" />
                         <path d="M13.73 21a2 2 0 0 1-3.46 0" fill="currentColor" />
                         <path d="M4 5c-1 1.5-1 3 0 4.5" fill="currentColor" />
                         <path d="M20 5c1 1.5 1 3 0 4.5" fill="currentColor" />
-                    </svg>
+                    </svg> */}
+                    <NotificationsActiveIcon sx={{ color: "#616263", width: "20px", height: "20px" }}/>
                 </button>
 
 
