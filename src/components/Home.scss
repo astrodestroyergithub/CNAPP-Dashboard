@@ -10,7 +10,7 @@ $text: #0f172a;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 27px;
+    font-size: 22px;
     padding-inline: 5em;
     // padding-block: 5em;
 }
@@ -20,4 +20,51 @@ $text: #0f172a;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding-top: 3%;
+}
+
+.app-headline-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 30% 0 30%;
+    gap: 1em;
+
+    .cnapp-heading {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .cnapp-subheading {
+        font-size: 13px;
+    }
+}
+
+.featured-container {
+    align-items: center;
+    justify-content: center;
+    padding: 16% 25% 0 25%;
+}
+
+.featured {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2em;
+    padding: 12px;
+    font-size: 11px;
+    justify-content: space-evenly;
+
+    .featured-text {
+        margin-right: 2%;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+        border: 1px solid $text;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
 }
