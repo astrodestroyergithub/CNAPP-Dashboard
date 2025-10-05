@@ -33,11 +33,7 @@ export default function Header({ onSearch, pageName }) {
     return (
         !isModalOpen && <header className={`app-header ${scrolled ? "scrolled" : ""}`}>
             <div className="header-left">
-                {/* <span className="status-dot" aria-hidden="true" /> */}
                 <Link to="/" className={`sticky-bar-home ${location.pathname === '/' ? 'home-active' : 'not-home'}`}>Home</Link>
-                {/* <svg className="from-home-to" viewBox="0 0 24 24" width="18" height="18" aria hidden>
-                    <path d="M9 18l6-6-6-6" ill="none" stroke="currentColor"/>
-                </svg> */}
                 {pageName !== "Home" ? (<>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
