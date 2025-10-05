@@ -32,6 +32,26 @@ const testimonials = [
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLVPNW_GZjHjK8ahibt0sHcaUillVa11eoQhchBHEgVugLXRQvOYKk5QCc3stN6G1Jn8A&usqp=CAU',
     text: 'My go-to platform for everything investment related.',
   },
+  {
+    id: 7,
+    image: 'https://i.pinimg.com/originals/19/01/a6/1901a6d752d02a8bb590368f45721d3f.jpg',
+    text: 'I could take a maternity break after making huge profits.'
+  },
+  {
+    id: 8,
+    image: 'https://img.mensxp.com/media/content/2023/Jul/13_64bfe432628b3.jpeg',
+    text: 'At 27, my portfolio has grown to $2M!'
+  },
+  {
+    id:9,
+    image: 'https://www.sakshi.com/gallery_images/2024/09/14/Suryakumar%20Yadav%20Birthday%20Special%20Photos_3.jpg',
+    text: 'Best platform for long term investments.'
+  },
+  {
+    id:10,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsW0VTAehrlrFcZii_YyHIl31Z9DRUeWwM3g&s',
+    text: 'Fast, interactive web platform. Excellent options for GTT, ATO alerts etc.'
+  }
 ];
 
 const TestimonialSection = () => {

@@ -113,8 +113,14 @@ const Home = () => {
             <section className="benefits">
               <BenefitsSection/>
             </section>
-            <section className="market-research">
-              <MarketResearchSection/>
+            <section className="portfolio-section">
+              <MarketResearchSection name='portfolio' />
+            </section>
+            <section className="blogs-section">
+              <MarketResearchSection name='blogs' />
+            </section>
+            <section className="tips-section">
+              <MarketResearchSection name='tips' />
             </section>
             <section className="testimonials">
               <TestimonialSection/>

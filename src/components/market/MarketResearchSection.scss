@@ -3,14 +3,25 @@ $border: #000;
 .market-research-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0 10% 5% 10%;
+  padding-top: 10%;
+  padding-bottom: 5%;
+  padding-left: 25%;
+  padding-right: 18%;
 
   .market-research-content {
     font-size: 11px;
     opacity: 0;
-    width: 60%;
-    justify-content: space-evenly;
-    // margin-left: 10px;
+    width: 70%;
+    text-align: justify;
+  }
+
+  .market-research-content-alt {
+    font-size: 11px;
+    opacity: 0;
+    width: 70%;
+    // justify-content: center;
+    text-align: justify;
+    // text-align-last: justify;
   }
 
   .market-research-image-wrapper {
@@ -19,6 +30,10 @@ $border: #000;
 
   .market-research-content {
     transform: translateX(100px);
+  }
+
+  .market-research-content-alt {
+    transform: translateX(-100px);
   }
 
   &.animate {
@@ -30,13 +45,18 @@ $border: #000;
       animation: slideFadeIn 0.8s ease-out forwards;
       animation-delay: 0.2s;
     }
+
+    .market-research-content-alt {
+      animation: slideFadeInReverse 0.8s ease-out forwards; 
+      animation-delay: 0.2s;
+    }
   }
 
   .market-research-image-wrapper {
     .market-research-image {
-        height: 220px;
-        width: 340px;
-        margin-left: 30%;
+        height: 100%;
+        width: 70%;
+        // margin-left: 30%;
         border: 2px solid $border;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -66,6 +86,17 @@ $border: #000;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFadeInReverse {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); 
     opacity: 1;
   }
 }
