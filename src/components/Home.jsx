@@ -122,13 +122,15 @@ const Home = () => {
             <section className="tips-section">
               <MarketResearchSection name='tips' />
             </section>
+            <section className="cnapp-dashboard-section">
+              <MarketResearchSection name='dashboard' />
+            </section>
             <section className="testimonials">
               <TestimonialSection/>
             </section>
             <section className="newsletter-cta">
               <NewsletterSection/>
             </section>
-            <Link to="/dashboard">CNAPP Dashboard</Link>
             <Chatbot/>
         </div>
         <Footer/>
