@@ -1,6 +1,5 @@
 import React from 'react';
 import './TestimonialSection.scss';
-import dispImg5 from '../../assets/pictures/display_pic5.png';
 
 const testimonials = [
   {

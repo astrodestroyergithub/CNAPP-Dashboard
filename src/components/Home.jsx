@@ -12,9 +12,9 @@ import BenefitsSection from './benefits/BenefitsSection'
 import MarketResearchSection from './market/MarketResearchSection'
 import TestimonialSection from './testimonials/TestimonialSection'
 // Images
-import dispImg1 from '../assets/pictures/display_pic1.png'
-import dispImg2 from '../assets/pictures/display_pic2.png'
-import dispImg3 from '../assets/pictures/display_pic3.png'
+import dispImg1 from '../assets/pictures/display_pic_1.png'
+import dispImg2 from '../assets/pictures/display_pic_2.png'
+import dispImg3 from '../assets/pictures/display_pic_3.png'
 
 const Section = ({ leftContent, rightContent }) => {
   const controlsLeft = useAnimation();
@@ -23,8 +23,8 @@ const Section = ({ leftContent, rightContent }) => {
 
   useEffect(() => {
     if (inView) {
-      controlsLeft.start({ x: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } });
-      controlsRight.start({ x: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } });
+      controlsLeft.start({ x: 0, y: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut", delay: 0.2 } });
+      controlsRight.start({ x: 0, y: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut", delay: 0.2 } });
     }
   }, [inView, controlsLeft, controlsRight]);
 
@@ -32,7 +32,7 @@ const Section = ({ leftContent, rightContent }) => {
     <div ref={ref} className="featured min-h-screen px-10">
       {/* Left */}
       <motion.div
-        initial={{ x: -150, opacity: 0 }}
+        initial={{ x: -150, y: 50, opacity: 0 }}
         animate={controlsLeft}
         className="featured-text"
       >
@@ -41,7 +41,7 @@ const Section = ({ leftContent, rightContent }) => {
 
       {/* Right */}
       <motion.div
-        initial={{ x: 150, opacity: 0 }}
+        initial={{ x: 150, y: 0, opacity: 0 }}
         animate={controlsRight}
         className="featured-image"
       >

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import dispImg4 from '../../assets/pictures/display_pic4.png';
+import dispImg4 from '../../assets/pictures/display_pic_4.png';
 import './MarketResearchSection.scss';
 
 const MarketResearchSection = () => {
