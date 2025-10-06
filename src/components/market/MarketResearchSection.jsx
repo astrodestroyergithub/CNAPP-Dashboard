@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import dispImg4 from '../../assets/pictures/display_pic_4.png';
 import './MarketResearchSection.scss';
