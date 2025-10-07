@@ -1,7 +1,7 @@
 import Header from './Header'
 import Footer from './Footer'
 import './Home.scss'
-import Logo from './Logo'
+import Logo from './logo/Logo'
 import Chatbot from './chatbot/Chatbot'
 import NewsletterSection from './newsletter/NewsletterSection'
 import BenefitsSection from './benefits/BenefitsSection'
@@ -14,11 +14,11 @@ const Home = () => {
     <>
         <Header pageName={'Home'}/>
         <div>
-            <section className="section">
+            <section className="main-heading-section">
               <div className='section-title main-heading'>Cross-Network Advanced Portfolio Platform (CNAPP)</div>
-              <div className='grid home-svg'>
-                <Logo/>
-              </div>
+            </section>
+            <section className='home-landing-logo'>
+              <Logo/>
             </section>
             <section className="app-headline-banner">
               <div className="cnapp-heading">
