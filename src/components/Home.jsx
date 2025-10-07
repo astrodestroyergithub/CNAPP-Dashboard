@@ -7,7 +7,6 @@ import NewsletterSection from './newsletter/NewsletterSection'
 import BenefitsSection from './benefits/BenefitsSection'
 import MarketResearchSection from './market/MarketResearchSection'
 import TestimonialSection from './testimonials/TestimonialSection'
-import Section from './featured/Section'
 import FeaturedSection from './featured/FeaturedSection'
 
 const Home = () => {
