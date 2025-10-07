@@ -53,10 +53,9 @@ export default function Header({ onSearch, pageName }) {
                 </>) : null}
             </div>
 
-            {/* centered search - absolutely centered so it stays visually centered */}
             <div className="search-centered" aria-hidden="false">
                 <div className="search-wrap" role="search">
-                    <svg className="icon search" viewBox="0 0 24 24" width="18" height="18" aria hidden>
+                    <svg className="icon-search" viewBox="0 0 24 24" width="18" height="18" aria hidden>
                         <path
                             d="M21 21l-4.35-4.35m1.44-5.4a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"
                             fill="none"
@@ -94,13 +93,7 @@ export default function Header({ onSearch, pageName }) {
                 </div>
 
                 <button className="icon-btn">
-                    {/* <svg className="notification-bell" viewBox="0 0 24 24" width="18" height="18" aria hidden>
-                        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" fill="currentColor" />
-                        <path d="M13.73 21a2 2 0 0 1-3.46 0" fill="currentColor" />
-                        <path d="M4 5c-1 1.5-1 3 0 4.5" fill="currentColor" />
-                        <path d="M20 5c1 1.5 1 3 0 4.5" fill="currentColor" />
-                    </svg> */}
-                    <NotificationsActiveIcon sx={{ color: "#616263", width: "20px", height: "20px" }}/>
+                    <NotificationsActiveIcon sx={{ color: "#616263", width: "17px", height: "17px" }}/>
                 </button>
 
 
