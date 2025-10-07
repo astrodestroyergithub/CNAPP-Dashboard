@@ -1,8 +1,5 @@
-import { useEffect } from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import { motion, useAnimation } from "framer-motion"
-import { useInView } from "react-intersection-observer"
 import './Home.scss'
 import Logo from './Logo'
 import Chatbot from './chatbot/Chatbot'
@@ -10,45 +7,11 @@ import NewsletterSection from './newsletter/NewsletterSection'
 import BenefitsSection from './benefits/BenefitsSection'
 import MarketResearchSection from './market/MarketResearchSection'
 import TestimonialSection from './testimonials/TestimonialSection'
-// Images
+import Section from './featured/Section'
+// Images for featured section
 import dispImg1 from '../assets/pictures/display_pic_1.png'
 import dispImg2 from '../assets/pictures/display_pic_2.png'
 import dispImg3 from '../assets/pictures/display_pic_3.png'
-
-const Section = ({ leftContent, rightContent }) => {
-  const controlsLeft = useAnimation();
-  const controlsRight = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
-
-  useEffect(() => {
-    if (inView) {
-      controlsLeft.start({ x: 0, y: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut", delay: 0.2 } });
-      controlsRight.start({ x: 0, y: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut", delay: 0.2 } });
-    }
-  }, [inView, controlsLeft, controlsRight]);
-
-  return (
-    <div ref={ref} className="featured min-h-screen px-10">
-      {/* Left */}
-      <motion.div
-        initial={{ x: -150, y: 50, opacity: 0 }}
-        animate={controlsLeft}
-        className="featured-text"
-      >
-        {leftContent}
-      </motion.div>
-
-      {/* Right */}
-      <motion.div
-        initial={{ x: 150, y: 0, opacity: 0 }}
-        animate={controlsRight}
-        className="featured-image"
-      >
-        {rightContent}
-      </motion.div>
-    </div>
-  );
-};
 
 const Home = () => {
 
