@@ -8,45 +8,9 @@ import BenefitsSection from './benefits/BenefitsSection'
 import MarketResearchSection from './market/MarketResearchSection'
 import TestimonialSection from './testimonials/TestimonialSection'
 import Section from './featured/Section'
-// Images for featured section
-import dispImg1 from '../assets/pictures/display_pic_1.png'
-import dispImg2 from '../assets/pictures/display_pic_2.png'
-import dispImg3 from '../assets/pictures/display_pic_3.png'
+import FeaturedSection from './featured/FeaturedSection'
 
 const Home = () => {
-
-  const featuredData = [
-    {
-      id: 1,
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: dispImg1,
-      alt: 'Display image 1'
-    },
-    {
-      id: 2,
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: dispImg2,
-      alt: 'Display image 2'
-    },
-    {
-      id: 3,
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: dispImg3,
-      alt: 'Display image 3'
-    }
-  ];
-
-  const sections = featuredData.map((item) => ({
-    left: (
-        <div className="featured-text">{item.text}</div>
-      ),
-    right: (
-          <div className="featured-image">
-            <img src={item.image} alt={item.alt} />
-          </div>
-        ),
-  }));
-  
   return (
     <>
         <Header pageName={'Home'}/>
@@ -65,34 +29,14 @@ const Home = () => {
                 It won't snap and it won't break, it is here to make your life great. Try today!
               </div>
             </section>
-            <div className='overflow-x-hidden'>
-              <section className="featured-container">
-                {sections.map((s, i) => (
-                  <Section key={i} leftContent={s.left} rightContent={s.right} />
-                ))}
-              </section>
-            </div>
-            <section className="benefits">
-              <BenefitsSection/>
-            </section>
-            <section className="portfolio-section">
-              <MarketResearchSection name='portfolio' />
-            </section>
-            <section className="blogs-section">
-              <MarketResearchSection name='blogs' />
-            </section>
-            <section className="tips-section">
-              <MarketResearchSection name='tips' />
-            </section>
-            <section className="cnapp-dashboard-section">
-              <MarketResearchSection name='dashboard' />
-            </section>
-            <section className="testimonials">
-              <TestimonialSection/>
-            </section>
-            <section className="newsletter-cta">
-              <NewsletterSection/>
-            </section>
+            <FeaturedSection/>
+            <BenefitsSection/>
+            <MarketResearchSection name='portfolio'/>
+            <MarketResearchSection name='blogs'/>
+            <MarketResearchSection name='tips'/>
+            <MarketResearchSection name='dashboard'/>
+            <TestimonialSection/>
+            <NewsletterSection/>
             <Chatbot/>
         </div>
         <Footer/>
