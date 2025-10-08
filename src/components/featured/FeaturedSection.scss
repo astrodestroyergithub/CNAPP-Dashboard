@@ -1,0 +1,114 @@
+.featured-container {
+  align-items: center;
+  justify-content: center;
+  padding: 17% 25% 0 25%;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2px;
+  padding: 12px;
+  font-size: 11px;
+  justify-content: space-evenly;
+
+  .featured-text {
+    margin-top: -11px;
+    padding: 12px;
+    text-align: justify;
+  }
+
+  .featured-image {
+    > img {
+      height: 100%;
+      width: 100%;
+      object-fit: fill;
+      border: 1px solid black;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+/* 2XL - ULTRA WIDE MONITORS: > 1520px */
+
+/* XL - BIG LAPTOPS: 1280px - 1520px */
+
+@media (max-width: 95rem) {
+  .featured-container {
+    padding-block-start: 12%;
+  }
+}
+
+/* LG - SMALL LAPTOPS: 1024px - 1280px */
+
+@media (max-width: 80rem) {
+  .featured-container {
+    padding: 14% 22% 0 22%;
+  }
+
+  .featured {
+    .featured-text {
+      font-size: 0.5rem;
+    }
+  }
+}
+
+/* MD - TABLETS (PORTRAIT): 768px - 1024px */
+
+@media (max-width: 64rem) {
+  .featured {
+    .featured-text {
+      font-size: 0.4rem;
+    }
+  }
+}
+
+/* SM - PHONE LANDSCAPE: 576px - 768px */
+
+@media(max-width: 48rem) {
+  .featured-container {
+    padding-block-start: 19%;
+    padding-block-end: 2%;
+    margin-left: -3.8rem;
+  }
+
+  .featured {
+    .featured-text {
+      font-size: 0.41rem;
+    }
+
+    .featured-image {
+      > img {
+        height: 130%;
+        width: 130%;
+      }
+    }
+  }  
+}
+
+/* XS - PHONE PORTRAIT: 402px - 576px */
+
+@media(max-width: 36rem) {
+  .featured-container {
+    padding-block-start: 19%;
+    padding-block-end: 2%;
+    margin-left: -2.6rem;
+  }
+
+  .featured {
+    .featured-text {
+      font-size: 0.25rem;
+    }
+  }  
+}
+
+/* XXS - PHONE PORTRAIT: < 402px */
+
+@media(max-width: 25.12rem) {
+  .featured {
+    .featured-text {
+      font-size: 0.23rem;
+    }
+  }  
+}

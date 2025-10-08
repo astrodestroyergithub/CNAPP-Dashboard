@@ -71,3 +71,42 @@
     }
   }
 }
+
+@media(max-width: 48rem) {
+  /* 768px */
+  
+  .newsletter-section {
+    padding-block: 0.5rem;
+    margin-top: 4rem;
+  }
+}
+
+@media(max-width: 36rem) {
+  .newsletter-section {
+    .newsletter-heading {
+      font-size: 1rem;
+    }
+
+    .newsletter-description {
+      font-size: 0.6rem;
+    }
+
+    .newsletter-form {
+      gap: 0.6rem;
+    }
+
+    .newsletter-input {
+      padding: 0.34rem 0.7rem;
+      font-size: 0.68rem;
+      width: 17rem;
+      max-width: 56%;
+    }
+
+    .submit-button {
+      padding: 0.37rem 0.34rem;
+      font-size: 0.6rem;
+      max-width: 21%;
+      font-weight: 500;
+    }
+  }
+}

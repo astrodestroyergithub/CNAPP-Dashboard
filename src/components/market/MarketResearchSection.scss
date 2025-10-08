@@ -19,9 +19,7 @@ $border: #000;
     font-size: 11px;
     opacity: 0;
     width: 70%;
-    // justify-content: center;
     text-align: justify;
-    // text-align-last: justify;
   }
 
   .market-research-image-wrapper {
@@ -56,7 +54,6 @@ $border: #000;
     .market-research-image {
         height: 100%;
         width: 70%;
-        // margin-left: 30%;
         border: 2px solid $border;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -98,5 +95,133 @@ $border: #000;
   100% {
     transform: translateX(0); 
     opacity: 1;
+  }
+}
+
+@media (max-width: 80rem) {
+  /* 1280px */
+
+  .market-research-section {
+    .market-research-content {
+      font-size: 0.42rem;
+      width: 14.2rem;
+    }
+
+    .market-research-content-alt {
+      font-size: 0.42rem;
+      width: 14.2rem;
+    }
+
+    .market-research-image-wrapper {
+      .market-research-image {
+        height: 8rem;
+        width: 14.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 64.12rem) {
+  /* 1026px */
+
+  .market-research-section {
+    .market-research-content {
+      font-size: 0.42rem;
+      width: 14.2rem;
+    }
+
+    .market-research-content-alt {
+      font-size: 0.42rem;
+      width: 14.2rem;
+    }
+
+    .market-research-image-wrapper {
+      .market-research-image {
+        height: 8rem;
+        width: 14.2rem;
+      }
+    }
+  }
+} 
+
+@media (max-width: 53.5rem) {
+  /* 856px */
+
+  .market-research-section {
+    gap: 1.2rem;
+    margin-left: -1.8rem;
+
+    .market-research-content {
+      font-size: 0.32rem;
+      width: 10rem;
+    }
+
+    .market-research-content-alt {
+      font-size: 0.32rem;
+      width: 10rem;
+    }
+
+    .market-research-image-wrapper {
+      .market-research-image {
+        height: 6.2rem;
+        width: 10rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 36.5rem) {
+  /* 582px */
+
+  .market-research-section {
+    padding-inline: auto;
+    margin-inline: auto;
+    
+    .market-research-content {
+      font-size: 0.21rem;
+      width: 8.6rem;
+    }
+
+    .market-research-content-alt {
+      font-size: 0.21rem;
+      width: 8.6rem;
+    }
+
+    .market-research-image-wrapper {
+      .market-research-image {
+        height: 4.84rem;
+        width: 8.6rem;
+        border: 1px solid $border;
+      }
+    }
+  }
+}
+
+@media (max-width: 31.38rem) {
+  /* 502px */
+
+  .market-research-section {
+    padding-left: 12%;
+    padding-right: 5%;
+    margin-inline: 0rem;
+    justify-content: center;
+    
+    .market-research-content {
+      font-size: 0.21rem;
+      width: 8.6rem;
+    }
+
+    .market-research-content-alt {
+      font-size: 0.21rem;
+      width: 8.6rem;
+    }
+
+    .market-research-image-wrapper {
+      .market-research-image {
+        height: 4.84rem;
+        width: 8.6rem;
+        border: 0.6px solid $border;
+      }
+    }
   }
 }

@@ -62,3 +62,165 @@
     }
   }
 }
+
+/* LG - SMALL LAPTOPS: 1024px - 1280px */
+
+@media (max-width: 79rem) {
+  /* 1264px */
+
+  .benefits-section {
+    .benefit-item {
+      .benefit-text {
+        font-size: 0.4rem;
+        width: 7.2rem;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}
+
+/* MD - TABLETS (PORTRAIT): 768px - 1024px */
+
+@media (max-width: 56rem) {
+  /* 896px */
+
+  .benefits-section {
+    .benefit-item {
+      .hexagon {
+        width: 3.43rem;
+        height: 2.86rem;
+
+        .hex-icon {
+          font-size: 0.8rem;
+        }
+      }
+
+      .benefit-text {
+        font-size: 0.33rem;
+        width: 5rem;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}
+
+/* SM - PHONE LANDSCAPE: 576px - 768px */
+
+@media (max-width: 41.31rem) {
+  /* 661px */
+
+  .benefits-section {
+    padding-inline: auto;
+    margin-inline: -3rem;
+
+    .benefit-item {
+      .hexagon {
+        width: 3.43rem;
+        height: 2.86rem;
+
+        .hex-icon {
+          font-size: 0.8rem;
+        }
+      }
+
+      .benefit-text {
+        font-size: 0.33rem;
+        width: 5rem;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}
+
+@media (max-width: 40.31rem) {
+  /* 40.31rem x 16px = 645px */
+
+  .benefits-section {
+    margin-inline: auto;
+
+    .benefits-wrapper {
+      gap: 5rem;
+    }
+
+    .benefit-item {
+      .hexagon {
+        width: 5.5rem;
+        height: 4.58rem;
+
+        .hex-icon {
+          font-size: 1.5rem;
+        }
+      }
+
+      .benefit-text {
+        font-size: 0.38rem;
+        width: 7rem;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}
+
+/* XS - PHONE PORTRAIT: 402px - 576px */
+
+@media (max-width: 36rem) {
+  /* 576px */
+
+  .benefits-section {
+    padding-inline: auto;
+    margin-inline: auto;
+
+    .benefits-wrapper {
+      gap: 1rem;
+    }
+
+    .benefit-item {
+      .hexagon {
+        width: 2rem;
+        height: 1.67rem;
+
+        .hex-icon {
+          font-size: 0.6rem;
+        }
+      }
+
+      .benefit-text {
+        font-size: 0.2rem;
+        width: 3.2rem;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}
+
+/* Contains parts of XS and XXS screen types */
+
+@media (max-width: 26.38rem) {
+  /* 422px */
+
+  .benefits-section {
+    padding-block-start: 3rem;
+    padding-block-end: 3rem;
+
+    .benefits-wrapper {
+      gap: 0.48rem;
+    }
+
+    .benefit-item {
+      .hexagon {
+        width: 4.8rem;
+        height: 4rem;
+
+        .hex-icon {
+          font-size: 1.5rem;
+        }
+      }
+
+      .benefit-text {
+        font-size: 0.28rem;
+        width: 7rem;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}

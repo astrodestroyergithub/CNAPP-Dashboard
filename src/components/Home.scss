@@ -1,4 +1,4 @@
-// variables
+// Variables
 $bg: #ffffff;
 $muted: #94a3b8;
 $border: #eef2f7;
@@ -6,70 +6,141 @@ $accent: #1f5eff;
 $text: #0f172a;
 
 .main-heading {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    padding-inline: 5em;
-    // padding-block: 5em;
-}
-
-.home-svg {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-top: 3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  padding-inline: 60px;
+  padding-block-start: 20px;
 }
 
 .app-headline-banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2% 30% 0 30%;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 80px;
+  padding-block-start: 45px;
+  gap: 12px;
+
+  .cnapp-heading {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .cnapp-subheading {
+    font-size: 13px;
+  }
+}
+
+/* LG - SMALL LAPTOPS: 1024px - 1280px */
+
+@media (max-width: 72rem) {
+  /* 1153px / 16px = 72rem */
+
+  .main-heading {
+    font-size: 1.4rem;
+    /* 22px / 16px = 1.4rem */
+
+    padding-inline: 4rem;
+    /* 80px / 16px = 5rem */
+  }
+
+  .app-headline-banner {
+    padding-inline: 5rem;
+    padding-block-start: 3rem;
+    gap: 0.75rem;
 
     .cnapp-heading {
-        font-size: 18px;
-        font-weight: bold;
+      font-size: 1.12rem;
     }
 
     .cnapp-subheading {
-        font-size: 13px;
+      font-size: 0.82rem;
     }
+  }
 }
 
-.featured-container {
-  align-items: center;
-  justify-content: center;
-  padding: 17% 25% 0 25%;
-}
+/* MD - TABLETS (PORTRAIT): 768px - 1024px */
 
-.featured {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2em;
-  padding: 12px;
-  font-size: 11px;
-  justify-content: space-evenly;
+@media (max-width: 51rem) {
+  /* 51rem x 16px = 816px */
 
-  .featured-text {
-    margin-top: -11px;
-    margin-right: 2%;
-    padding: 12px;
-    text-align: justify;
+  .main-heading {
+    font-size: 1.15rem;
+    padding-inline: 4rem;
   }
 
-  .featured-image {
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: fill;
-      border: 1px solid black;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  .app-headline-banner {
+    padding-inline: 5rem;
+    padding-block-start: 2.2rem;
+    gap: 0.45rem;
+
+    .cnapp-heading {
+      font-size: 0.9rem;
+    }
+
+    .cnapp-subheading {
+      font-size: 0.58rem;
+    }
+  }
+}
+
+/* SM - PHONE LANDSCAPE: 576px - 768px */
+
+@media(max-width: 43rem) {
+  /* 43rem x 16px = 688px */
+
+  
+}
+
+/* XS - PHONE PORTRAIT: 402px - 576px */
+
+@media(max-width: 34rem) {
+  /* 34rem x 16px = 544px */
+
+  .main-heading {
+    font-size: 0.84rem;
+    padding-inline: 2rem;
+  }
+
+  .app-headline-banner {
+    padding-inline: 5rem;
+    padding-block-start: 2rem;
+    gap: 0.38rem;
+
+    .cnapp-heading {
+      font-size: 0.63rem;
+    }
+
+    .cnapp-subheading {
+      font-size: 0.4rem;
+    }
+  }
+}
+
+/* XXS - PHONE PORTRAIT: < 402px */
+
+@media(max-width: 25rem) {
+  /* 23rem x 16px = 400px */
+
+  .main-heading {
+    font-size: 0.65rem;
+    padding-inline: 1rem;
+  }
+
+  .app-headline-banner {
+    padding-inline: 5rem;
+    padding-block-start: 2rem;
+    gap: 0.38rem;
+
+    .cnapp-heading {
+      font-size: 0.51rem;
+    }
+
+    .cnapp-subheading {
+      font-size: 0.32rem;
     }
   }
 }
