@@ -30,7 +30,7 @@
     animation: marquee 30s linear infinite;
 
     &:hover {
-      animation-play-state: paused; // pause on hover if needed
+      animation-play-state: paused; // Pause on hover if needed
     }
   }
 
@@ -80,5 +80,13 @@
 
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@media(max-width: 48rem) {
+  /* 768px */
+  
+  .testimonial-section {
+    display: none;
   }
 }
