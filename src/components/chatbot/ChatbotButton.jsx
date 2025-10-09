@@ -3,7 +3,7 @@ import './Chatbot.scss';
 
 const ChatbotButton = ({ onClick }) => {
   return (
-    <button className="chatbot-button" onClick={onClick} aria-label="Open chat">
+    <button className="chatbot-button" onClick={onClick} aria-label="Chatbot button">
       <svg
         width="28"
         height="28"

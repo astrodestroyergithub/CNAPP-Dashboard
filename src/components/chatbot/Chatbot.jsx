@@ -1,18 +1,24 @@
-import React, { useState } from 'react';
-import ChatbotButton from './ChatbotButton';
-import Chatbox from './Chatbox';
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { setChatBoxState } from '../../store/dashboardSlice'
+import ChatbotButton from './ChatbotButton'
+import Chatbox from './Chatbox'
 
 const Chatbot = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch()
 
-  const toggleChatbox = () => setIsOpen((prev) => !prev);
+  const chatBoxState = useSelector((state) => state.dashboard.isChatBoxOpen)
+
+  const toggleChatbox = () => {
+    dispatch(setChatBoxState(!chatBoxState))
+  };
 
   return (
     <>
-      {isOpen && <Chatbox onClose={toggleChatbox} />}
-      <ChatbotButton onClick={toggleChatbox} />
+      {chatBoxState && <Chatbox onClose={toggleChatbox} />}
+      {!chatBoxState && <ChatbotButton onClick={toggleChatbox} />}
     </>
-  );
-};
+  )
+}
 
-export default Chatbot;
+export default Chatbot
