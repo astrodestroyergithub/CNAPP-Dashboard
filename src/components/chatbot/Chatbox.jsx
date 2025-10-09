@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Chatbot.scss'
 import SendIcon from '@mui/icons-material/Send'
 import ChatboxTextInputBar from './ChatboxTextInputBar'
