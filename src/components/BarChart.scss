@@ -13,8 +13,7 @@ $colors: (
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 180px; // reduced height
-  // padding: 10px;
+  height: 180px;
   overflow-y: auto;
 }
 
@@ -50,11 +49,6 @@ $colors: (
   position: relative;
   transition: height 0.3s ease-in-out;
   border-radius: 5px 5px 0 0;
-  // cursor: pointer;
-
-//   &:hover {
-//     filter: brightness(1.1);
-//   }
 }
 
 // Applying colors using a SASS loop and map
@@ -79,9 +73,6 @@ $colors: (
   grid-template-columns: 1fr 1fr;
   flex-wrap: wrap;
   margin-top: -3em;
-  // justify-content: center;
-  // margin-bottom: -12px;
-  // gap: 1px;
 }
 
 .legend-item {
