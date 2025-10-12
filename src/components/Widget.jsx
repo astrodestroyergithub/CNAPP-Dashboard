@@ -99,11 +99,33 @@ export default function Widget({widget, categoryId}){
                 <>{(typeof widget.data === 'string' && widget.data === 'No graph data available!') ? /* Checking for data availability */ (
                   <> 
                     <div className='no-ticket-container'>
-                      <div className='no-ticket'>
-                        <SegmentedCircle/>
+                      <div className="no-ticket">
+                        <svg
+                          className="ticket-icon"
+                          viewBox="0 0 64 64"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4 20
+                              a4 4 0 0 1 4 -4
+                              h48
+                              a4 4 0 0 1 4 4
+                              v6
+                              a6 6 0 0 0 0 12
+                              v6
+                              a4 4 0 0 1 -4 4
+                              H8
+                              a4 4 0 0 1 -4 -4
+                              v-6
+                              a6 6 0 0 0 0 -12
+                              v-6
+                              z"
+                            className="ticket-outline"
+                          />
+                        </svg>
                       </div>
                       <div className="small">
-                        {widget.data}
+                        {typeof widget.data === 'string' ? widget.data : 'Random value: ' + Math.floor(Math.random() * 1000)}
                       </div>
                     </div>
                   </>) : (<>
