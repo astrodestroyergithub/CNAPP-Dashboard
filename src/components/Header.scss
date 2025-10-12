@@ -329,6 +329,18 @@ $text: #0f172a;
         &.home-active {
           font-size: 0.72rem;
         }
+
+        &.not-home {
+          font-size: 0.72rem;
+        }
+      }
+
+      .greater-than-symbol {
+        display: none;
+      }
+
+      .brand {
+        display: none;
       }
     }
 

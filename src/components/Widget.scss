@@ -1,7 +1,58 @@
+// Variables
+$bar-color: #ccc; 
+$stroke-width: 1.5;
+
+.card {
+  .widget-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .no-segmented-circle-container {
+    display: flex;
+    flex-direction: column;
+
+    .no-segmented-circle {
+      text-align: center;
+    }
+  }
+
+  .no-bar-chart-container {
+    display: flex;
+    flex-direction: column;
+
+    .no-bar-chart {
+      justify-content: center;
+    }
+
+    .small {
+      margin-top: 22px;
+    }
+  }
+
+  .no-stacked-bar-chart-container {
+    display: flex;
+    flex-direction: column;
+
+    .no-stacked-bar-chart {
+      justify-content: center;
+    }
+  }
+
+  .no-ticket-container {
+    display: flex;
+    flex-direction: column; 
+    
+    .no-ticket {
+      text-align: center;
+    }
+  }
+}
+
 .stocks-icon {
   width: 64px;
   height: 64px;
-  color: #ccc; /* Light monochrome */
+  color: #ccc; 
 }
 
 .stocks-bar {
@@ -10,26 +61,11 @@
   fill: none;
 }
 
-// .zigzag-line {
-//   fill: none;
-//   stroke: currentColor;
-//   stroke-width: 2;
-//   stroke-linejoin: round;
-//   stroke-linecap: round;
-// }
-
-// .arrow-tip {
-//   fill: currentColor;
-//   stroke: none;
-// }
-
 .no-bar-chart {
-    display: flex;
-    padding: 1.25rem 0 1.75rem 8.4em;
+  display: flex;
+  padding: 1.25rem 0 1.75rem 0;
+  margin-top: 2em;
 }
-
-$bar-color: #ccc; // Light monochrome shade
-$stroke-width: 1.5;
 
 .stacked-horizontal-bar-icon {
   width: 64px;
@@ -45,6 +81,42 @@ $stroke-width: 1.5;
 }
 
 .no-stacked-bar-chart {
-    display: flex;
-    padding: 3rem 0 3rem 8.4em;
+  display: flex;
+  padding-block: 3rem;
+}
+
+@media (max-width: 47rem) {
+  /* 753px */
+
+  .card {
+    .widget-name {
+      font-size: 0.68rem;
+    }
+
+    .no-segmented-circle-container {
+      .small {
+        font-size: 0.5rem;
+      }
+    }
+
+    .no-bar-chart-container {
+      .small {
+        margin-top: 2rem;
+        font-size: 0.5rem;
+      }
+    }
+
+    .no-stacked-bar-chart-container {
+      .small {
+        font-size: 0.5rem;
+      }
+    }
+
+    .no-ticket-container {
+      .small {
+        font-size: 0.5rem;
+        margin-bottom: 0;
+      }
+    }
+  }
 }

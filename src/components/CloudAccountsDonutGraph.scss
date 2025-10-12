@@ -3,18 +3,19 @@
   align-items: center;
   font-family: sans-serif;
   font-size: 12px;
-  width: 250px; // Adjust container width here
+  padding-top: 10px;
+  width: 250px; 
 }
 
 .donut-chart {
-  width: 100px;   // Adjust donut width here
-  height: 100px;  // Adjust donut height here
+  width: 100px;   
+  height: 100px;  
 }
 
 .donut-ring,
 .donut-segment {
   transition: stroke-dasharray 0.3s ease;
-  transform: rotate(-90deg); // Start from top
+  transform: rotate(-90deg); 
   transform-origin: 50% 50%;
 }
 
@@ -63,4 +64,17 @@
 
 .legend-color.not-connected {
   background-color: #e6eeff;
+}
+
+@media (max-width: 47rem) {
+  /* 753px */
+
+  .donut-graph-container {
+    padding-top: 0.6rem;
+    .donut-legend {
+      .legend-item {
+        font-size: 0.5rem;
+      }
+    }
+  }
 }

@@ -1,0 +1,147 @@
+.ticket-card {
+  background: #fff;
+  padding: 16px 16px 2px 16px;
+  max-width: 410px;
+  display: flex;
+  flex-direction: column;
+
+  .ticket-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 8px;
+
+    .ticket-id {
+      font-size: 0.65em;
+      font-weight: 500;
+      color: #22223b;
+    }
+
+    .status-badge {
+      font-size: 0.55em;
+      padding: 2px 7px;
+      border-radius: 18px;
+      font-weight: 600;
+      &.status-open { background: #f9ca24; color: #222; }
+      &.status-inprogress { background: #0984e3; color: #fff; }
+      &.status-closed { background: #636e72; color: #fff; }
+    }
+
+    .priority-badge {
+      padding: 2px 7px;
+      border-radius: 18px;
+      font-weight: 600;
+      font-size: 0.55em;
+      border: 1px solid #dff9fb;
+      &.priority-critical { background: #eb2f06; color: #fff; }
+      &.priority-high { background: #f0932b; color: #fff; }
+      &.priority-medium { background: #6ab04c; color: #fff; }
+      &.priority-low { background: #c7ecee; color: #222; }
+    }
+  }
+
+  .ticket-title {
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  .ticket-description {
+    font-size: 0.45em;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    color: #353b48;
+  }
+
+  .ticket-details {
+    font-size: 0.45em;
+    color: #555;
+    margin-bottom: 10px;
+
+    div { 
+      margin-bottom: 2px; 
+    }
+  }
+
+  .ticket-notes {
+    background: #f1f2f6;
+    border-radius: 8px;
+    font-size: 0.45em;
+    padding: 5px;
+    color: #30336b;
+    margin-bottom: 12px;
+    margin-left: -1px;
+  }
+
+  .ticket-actions {
+    display: flex;
+    gap: 9px;
+
+    button {
+      background: #0984e3;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      padding: 3.5px 9px;
+      font-size: 0.55em;
+      font-weight: 600;
+      transition: background 0.12s;
+      cursor: pointer;
+
+      &:hover {
+        background: #74b9ff;
+        color: #222;
+      }
+    }
+  }
+}
+
+@media (max-width: 47rem) {
+    /* 753px */
+
+  .ticket-card {
+    padding: 0.6rem;
+
+    .ticket-header {
+      gap: 0.4rem;
+
+      .ticket-id {
+        font-size: 0.55rem;
+      }
+
+      .status-badge {
+        font-size: 0.5rem;
+        padding: 0.08rem 0.34rem;
+      }
+
+      .priority-badge {
+        font-size: 0.5rem;
+        padding: 0.08rem 0.34rem;
+      }
+    }
+
+    .ticket-title {
+      font-size: 0.65rem;
+    }
+
+    .ticket-description {
+      font-size: 0.5rem;
+    }
+
+    .ticket-details {
+      font-size: 0.5rem;
+    }
+
+    .ticket-notes {
+      font-size: 0.5rem;
+    }
+
+    .ticket-actions {
+      gap: 0.4rem;
+
+      button {
+        font-size: 0.5rem;
+        padding: 0.09rem 0.3rem;
+      }
+    }
+  }
+}

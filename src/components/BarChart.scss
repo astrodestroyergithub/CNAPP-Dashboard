@@ -1,9 +1,9 @@
 $colors: (
-  bar-1: #98C1D9, // Mild blue
-  bar-2: #E0BBE4, // Mild purple
-  bar-3: #FEC8D8, // Mild pink
-  bar-4: #F8EDD7, // Mild yellow
-  bar-5: #B5EAD7 // Mild green
+  bar-1: #4d7cfe, 
+  bar-2: #43a047, 
+  bar-3: #fdd835, 
+  bar-4: #ef9f1c,
+  bar-5: #c62828
 );
 
 .bar-chart-container {
@@ -44,7 +44,7 @@ $colors: (
 }
 
 .bar-item {
-  width: 18%; // Distributes the bars evenly
+  width: 7%; // Distributes the bars evenly
   min-height: 5px;
   position: relative;
   transition: height 0.3s ease-in-out;
@@ -91,4 +91,19 @@ $colors: (
 .legend-label {
   font-size: 9px;
   color: #555;
+}
+
+@media (max-width: 47rem) {
+  /* 753px */
+
+  .bar-chart-container {
+    padding-top: 0.6rem;
+    .legend {
+      .legend-item {
+        .legend-label {
+          font-size: 0.48rem;
+        }
+      }
+    }
+  }
 }

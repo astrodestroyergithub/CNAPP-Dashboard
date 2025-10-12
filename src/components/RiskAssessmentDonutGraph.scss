@@ -3,12 +3,13 @@
   align-items: center;
   font-family: sans-serif;
   font-size: 12px;
-  width: 300px; // container width
+  padding-top: 10px;
+  width: 300px; 
 }
 
 .risk-donut-chart {
-  width: 100px; // donut width
-  height: 100px; // donut height
+  width: 100px; 
+  height: 100px; 
 }
 
 .donut-segment {
@@ -53,4 +54,17 @@
   height: 10px;
   border-radius: 50%;
   margin-right: 8px;
+}
+
+@media (max-width: 47rem) {
+  /* 753px */
+
+  .risk-donut-container {
+    padding-top: 0.6rem;
+    .risk-donut-legend {
+      .legend-item {
+        font-size: 0.5rem;
+      }
+    }
+  }
 }

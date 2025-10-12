@@ -63,7 +63,7 @@ export default function AddWidgetModal(){
       "id": newWidgetId,
       "name": addWidgetName,
       "type": tab === 'c1' ? "donut-chart" : tab === 'c2' ? "bar-chart" : tab === 'c3' ? "stacked-bar-chart" : "random-text",
-      "data": "No Graph data available!",
+      "data": "No graph data available!",
       "active": true
     };
     // Category list containing all the widgets including the recently added one

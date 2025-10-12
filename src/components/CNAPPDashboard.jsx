@@ -1,6 +1,7 @@
 import Header from './Header'
 import Footer from './Footer'
 import '../index.css'
+import './DashboardStyle.scss'
 import HeaderToolbarSection from './HeaderToolbarSection'
 import Dashboard from './Dashboard'
 import { useSelector, useDispatch } from 'react-redux'
@@ -12,10 +13,10 @@ const CNAPPDashboard = () => {
     const { isModalOpen } = useSelector((state) => state.dashboard)
     return (
         <>
-            <Header pageName={'Dashboard V2'} />
+            <Header pageName={'Dashboard'} />
             <div className="container">
                 <div style={{display: "flex"}} className="header">
-                    <h1>CNAPP Dashboard</h1>
+                    <div className='dashboard-main-heading'>CNAPP Dashboard</div>
                     <div style={{marginLeft: "auto"}}>
                         <HeaderToolbarSection />
                     </div>

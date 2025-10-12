@@ -1,10 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux';
-import Widget from './Widget';
-import { setModalOpen, setActiveCategory } from '../store/dashboardSlice';
+import { useDispatch, useSelector } from 'react-redux'
+import Widget from './Widget'
+import { setModalOpen, setActiveCategory } from '../store/dashboardSlice'
+import './DashboardStyle.scss'
 
-export default function Dashboard(){
+export default function Dashboard() {
   const dispatch = useDispatch();
-  const { categories } = useSelector(s=>s.dashboard);
+  const { categories } = useSelector(s => s.dashboard);
   return (
     <div>
       {categories.map(cat=>{
