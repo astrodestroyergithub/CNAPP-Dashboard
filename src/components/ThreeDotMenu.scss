@@ -73,3 +73,30 @@
     }
   }
 }
+
+@media (max-width: 47rem) {
+  /* 753px */
+
+  .menu-box {
+    top: 2.2rem;
+    min-width: 5rem;
+  }
+
+  .menu-item {
+    padding: 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  .toolbar-container {
+    .toolbar-button {
+      padding: 0.4rem 0;
+    }
+
+    .icon-only-button {
+      .icon {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+}

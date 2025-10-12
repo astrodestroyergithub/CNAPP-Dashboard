@@ -1,4 +1,3 @@
-import React from 'react';
 import './BarChart.scss';
 
 // const data = {
@@ -39,9 +38,7 @@ const BarChart = ({ data }) => {
               key={index}
               className={`bar-item ${getColorClass(label)}`}
               style={{ height: `${(value / maxBarHeight) * 100}%` }}
-              // title={`${label}: ${value}`}
             >
-              {/* <span className="bar-label">{label}</span> */}
             </div>
           ))}
         </div>

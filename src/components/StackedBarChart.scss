@@ -43,3 +43,22 @@
   margin-right: 6px;
   border-radius: 2px;
 }
+
+@media (max-width: 47rem) {
+  /* 753px */
+
+  .stacked-bar-container {
+    padding-top: 0.6rem;
+
+    .total-count {
+      font-size: 0.5rem;
+    }
+
+    .legend {
+      .legend-item {
+        font-size: 0.48rem;
+        padding-bottom: 0.1rem;
+      }
+    }
+  }
+}

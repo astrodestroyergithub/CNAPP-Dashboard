@@ -1,40 +1,35 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { removeWidget } from '../store/dashboardSlice';
-import BarChart from './BarChart';
-import StackedBarChart from './StackedBarChart';
-import CloudAccountsDonutGraph from './CloudAccountsDonutGraph';
-import RiskAssessmentDonutGraph from './RiskAssessmentDonutGraph';
-import SegmentedCircle from './SegmentedCircle';
-import './Widget.scss';
+import { useDispatch } from 'react-redux'
+import { removeWidget } from '../store/dashboardSlice'
+import BarChart from './BarChart'
+import StackedBarChart from './StackedBarChart'
+import CloudAccountsDonutGraph from './CloudAccountsDonutGraph'
+import RiskAssessmentDonutGraph from './RiskAssessmentDonutGraph'
+import SegmentedCircle from './SegmentedCircle'
+import TicketCard from '../components/widgets/ticket/TicketCard'
+import './Widget.scss'
 
 export default function Widget({widget, categoryId}){
   const dispatch = useDispatch();
   return (
     <div className="card">
       <button className="x" title="Remove" onClick={()=>dispatch(removeWidget({categoryId, widgetId: widget.id}))}>×</button>
-      <h4>{widget.name}</h4>
+      <div className='widget-name'>{widget.name}</div>
       {widget.type === 'donut-chart' ? (
-        <>{typeof widget.data === 'string' ? (
+        <>{typeof widget.data === 'string' ? /* Checking for data availability */ (
           <>
-            <span style={{marginLeft: "7.6em"}}>
-              <SegmentedCircle />
+            <div className='no-segmented-circle-container'>
+              <div className="no-segmented-circle">
+                <SegmentedCircle />
+              </div>
               <div className="small">{
                 typeof widget.data === 'string' ? widget.data : 'Random value: ' + Math.floor(Math.random()*1000)
               }</div>
-            </span>
+            </div>
           </>
         ) : 
           <>
             <>{widget.name === 'Cloud Accounts' ? (<>
               <CloudAccountsDonutGraph data={widget.data} />
-              {/* <div style={{display:'flex', alignItems:'center', gap:16}}>
-                <div className="donut" data-label={(widget.data?.total ?? widget.data?.critical ?? 0).toString()} />
-                <div className="small">
-                  <div>Connected: {widget?.data?.connected ?? '-'}</div>
-                  <div>Disconnected: {widget?.data?.disconnected ?? '-'}</div>
-                </div>
-              </div> */}
               </>) : (<>
                 <RiskAssessmentDonutGraph data={widget.data} />
               </>)
@@ -43,9 +38,9 @@ export default function Widget({widget, categoryId}){
         }</>
       ) : <>{
         widget.type === 'bar-chart' ? (
-          <>{typeof widget.data === 'string' ? 
-            <>
-                <span style={{marginTop: "2em"}} className="no-bar-chart">
+          <>{typeof widget.data === 'string' ? /* Checking for data availability */
+            <div className='no-bar-chart-container'>
+                <div className="no-bar-chart">
                   <svg
                     className="stocks-icon"
                     viewBox="0 0 64 64"
@@ -57,27 +52,21 @@ export default function Widget({widget, categoryId}){
                     <rect x="20" y="32" width="6" height="24" className="stocks-bar" />
                     <rect x="32" y="22" width="6" height="34" className="stocks-bar" />
                     <rect x="44" y="10" width="6" height="46" className="stocks-bar" />
-                    {/* <polyline
-                      points="4,52 16,34 28,36 40,18 52,10"
-                      className="zigzag-line"
-                    />
-                    <circle cx="52" cy="10" r="2" className="arrow-tip" /> */}
                   </svg>
-                </span>
-                <div style={{marginTop: "1.8em"}} className="small">{
+                </div>
+                <div className="small">{
                   typeof widget.data === 'string' ? widget.data : 'Random value: ' + Math.floor(Math.random()*1000)
                 }</div>
-            </> : <>
-                {/* <BarGraphWithLegend data={widget?.data} /> */}
+            </div> : <>
                 <BarChart data={widget?.data}/>
             </>} 
           </>
         ) : (<>{
             widget.type === 'stacked-bar-chart' ? (
               <>
-                {typeof widget.data === 'string' ? 
+                {typeof widget.data === 'string' ? /* Checking for data availability */
                 <>
-                  <span>
+                  <div className='no-stacked-bar-chart-container'>
                     <div className="no-stacked-bar-chart">
                       <svg
                         className="stacked-horizontal-bar-icon"
@@ -101,24 +90,26 @@ export default function Widget({widget, categoryId}){
                     <div className="small">{
                       typeof widget.data === 'string' ? widget.data : 'Random value: ' + Math.floor(Math.random()*1000)
                     }</div>
-                  </span>
+                  </div>
                 </> : <div>
                     <StackedBarChart data={widget.data} registry={widget.name} />
                 </div>}
               </>
               ) : (
-                <>{(typeof widget.data === 'string' && widget.data === 'No Graph data available!') ? (
-                  <>
-                    <span>
-                      <div></div>
-                      <div style={{marginTop: "3em", marginLeft: "7.3em"}} className="small">{
-                        widget.data
-                      }</div>
-                    </span>
+                <>{(typeof widget.data === 'string' && widget.data === 'No graph data available!') ? /* Checking for data availability */ (
+                  <> 
+                    <div className='no-ticket-container'>
+                      <div className='no-ticket'>
+                        <SegmentedCircle/>
+                      </div>
+                      <div className="small">
+                        {widget.data}
+                      </div>
+                    </div>
                   </>) : (<>
-                    <div style={{marginTop: "2.2em", marginLeft: "5.4em"}}>{
-                      'Random value: ' + Math.floor(Math.random()*1000)
-                    }</div>
+                    <div className='ticket'>
+                      <TicketCard ticket={widget.data}/>
+                    </div>
                   </>)
                 }</>
               )

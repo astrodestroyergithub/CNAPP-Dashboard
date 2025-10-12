@@ -50,7 +50,7 @@
           "id": "w4",
           "name": "Workload Alerts",
           "type": "bar-chart",
-          "data": "No Graph data available!",
+          "data": "No graph data available!",
           "active": true
         }
       ]
@@ -94,18 +94,25 @@
         {
           "id": "w7",
           "name": "Ticket 1",
-          "type": "random-text",
-          "data": "No Graph data available!",
+          "type": "ticket",
+          "data": "No graph data available!",
           "active": true
         },
         {
           "id": "w8",
           "name": "Ticket 2",
-          "type": "random-text",
+          "type": "ticket",
           "data": {
-            "a": 1,
-            "b": 5,
-            "c": 2
+            "id": "TCK-1254",
+            "title": "Critical Patch Required",
+            "description": "CVE-2025-1122 vulnerability found on DB server. Immediate patch recommended.",
+            "status": "Open",
+            "priority": "Critical",
+            "createdAt": "2025-10-09T17:42:00Z",
+            "updatedAt": "2025-10-11T09:30:00Z",
+            "assignee": "M. Patel",
+            "asset": "server-db-prod-12",
+            "notes": "Patch scheduled for tonight's maintenance window."
           },
           "active": true
         }
