@@ -1,5 +1,3 @@
-// Variables
-
 .container {
     .header {
         .dashboard-main-heading {
@@ -23,6 +21,18 @@
     .section {
         .section-title {
             font-size: 0.8rem;
+        }
+    }
+}
+
+@media (max-width: 24.12rem) {
+    /* 386px */
+
+    .container {
+        .header {
+            .dashboard-main-heading {
+                font-size: 0.9rem;
+            }
         }
     }
 }
