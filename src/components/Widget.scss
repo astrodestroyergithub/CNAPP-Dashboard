@@ -42,9 +42,11 @@ $stroke-width: 1.5;
   .no-ticket-container {
     display: flex;
     flex-direction: column; 
+    height: 100%;
     
     .no-ticket {
       text-align: center;
+      margin-block: 55px;
     }
   }
 }
@@ -85,6 +87,14 @@ $stroke-width: 1.5;
   padding-block: 3rem;
 }
 
+.ticket-icon {
+  stroke: $bar-color;
+  stroke-width: $stroke-width;
+  fill: none;
+  width: 80px;
+  height: 80px;
+}
+
 @media (max-width: 47rem) {
   /* 753px */
 
@@ -113,6 +123,10 @@ $stroke-width: 1.5;
     }
 
     .no-ticket-container {
+      .no-ticket {
+        margin-block: 32px
+      }
+
       .small {
         font-size: 0.5rem;
         margin-bottom: 0;
