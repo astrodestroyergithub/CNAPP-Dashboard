@@ -62,5 +62,17 @@ const slice = createSlice({
   }
 });
 
-export const { initialize, setCategories, setLatestWidgetId, setSelectedOption, setModalOpen, addWidgets, removeWidget, setActiveCategory, setGlobalSearch, setKebabMenuBoxState, setChatBoxState } = slice.actions;
+export const { 
+  initialize, 
+  setCategories, 
+  setLatestWidgetId, 
+  setSelectedOption, 
+  setModalOpen, 
+  addWidgets, 
+  removeWidget, 
+  setActiveCategory, 
+  setGlobalSearch, 
+  setKebabMenuBoxState, 
+  setChatBoxState } = slice.actions;
+
 export default slice.reducer;
