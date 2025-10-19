@@ -1,0 +1,31 @@
+// Variables
+$star-color: #FFD700;
+$stroke-width: 2;
+$stroke-linecap: round;
+$stroke-linejoin: round;
+
+.star-rating {
+    display: flex;
+    gap: 6px;
+    stroke: $star-color;
+    stroke-width: $stroke-width;
+
+    .star {
+        stroke: $star-color;
+        stroke-width: $stroke-width;
+        stroke-linecap: $stroke-linecap;
+        stroke-linejoin: $stroke-linejoin;
+
+        &.filled {
+            fill: $star-color;
+        }
+
+        &.empty {
+            fill: none;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}

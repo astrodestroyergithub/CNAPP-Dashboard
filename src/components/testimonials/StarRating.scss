@@ -1,0 +1,13 @@
+.star-rating {
+  display: flex;
+  align-items: center;
+
+  .star {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
