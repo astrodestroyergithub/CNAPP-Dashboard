@@ -51,8 +51,10 @@
 .testimonial-left {
   flex: 0 0 200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 22px;
 }
 
 .testimonial-left:hover .image-wrapper img {
@@ -76,6 +78,12 @@
   }
 }
 
+.testimonial-candidate-name {
+    font-size: 18px;
+    text-align: center;
+    color: #111010;
+}
+
 .testimonial-divider {
   width: 10px;
   height: 100%;
@@ -92,8 +100,9 @@
 }
 
 .testimonial-text {
+  margin-top: 8px;
   font-size: 12px;
-  color: #222;
+  color: #151515;
 }
 
 .testimonial-tags {

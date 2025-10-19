@@ -2,7 +2,7 @@ import React from 'react';
 import './TestimonialModal.scss';
 import ModalStarRating from './ModalStarRating';
 
-const TestimonialModal = ({ image, text, tags, filledStars, onClose }) => {
+const TestimonialModal = ({ name, image, text, tags, filledStars, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="testimonial-modal">
@@ -12,6 +12,9 @@ const TestimonialModal = ({ image, text, tags, filledStars, onClose }) => {
           <div className="testimonial-left">
             <div className="image-wrapper">
               <img src={image} alt="User" />
+            </div>
+            <div className="testimonial-candidate-name">
+                {name}
             </div>
           </div>
 
