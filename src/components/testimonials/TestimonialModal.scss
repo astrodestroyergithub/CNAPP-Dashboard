@@ -140,5 +140,13 @@
 }
 
 .testimonial-rating {
+    display: flex;
+    flex-direction: row;
     margin-top: auto;
+
+    .rating-fraction {
+        font-size: 22px;
+        color: #6a6868;
+        margin-left: 15px;
+    }
 }

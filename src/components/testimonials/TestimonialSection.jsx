@@ -18,7 +18,7 @@ const testimonials = [
     name: 'Lisa Haddidi',
     image: 'https://photosmint.com/wp-content/uploads/2025/03/Hot-Girls-Dp.jpeg',
     text: 'User-friendly interface and extremely efficient support!',
-    rating: 4,
+    rating: 4.3,
     tags: ['Quick Setup'],
   },
   {
@@ -34,7 +34,7 @@ const testimonials = [
     name: 'Leah Jaye',
     image: 'https://img.freepik.com/free-photo/indian-woman-posing-cute-stylish-outfit-camera-smiling_482257-122351.jpg?semt=ais_hybrid&w=740&q=80',
     text: 'Absolutely love how CNAPP tailors insights based on my behavior.',
-    rating: 5,
+    rating: 2.5,
     tags: ['Quick Setup', 'Ease of Use'],
   },
   {
@@ -58,7 +58,7 @@ const testimonials = [
     name: 'Victoria Smith',
     image: 'https://i.pinimg.com/originals/19/01/a6/1901a6d752d02a8bb590368f45721d3f.jpg',
     text: 'I could take a maternity break after making huge profits.',
-    rating: 3,
+    rating: 3.3,
     tags: ['Customer Love', 'User Friendly'],
   },
   {
@@ -66,7 +66,7 @@ const testimonials = [
     name: 'Ashley Johnson',
     image: 'https://img.mensxp.com/media/content/2023/Jul/13_64bfe432628b3.jpeg',
     text: 'At 27, my portfolio has grown to $2M!',
-    rating: 5,
+    rating: 4.5,
     tags: ['Ease of Use'],
   },
   {
@@ -74,7 +74,7 @@ const testimonials = [
     name: 'Bitasta Hembrum',
     image: 'https://www.sakshi.com/gallery_images/2024/09/14/Suryakumar%20Yadav%20Birthday%20Special%20Photos_3.jpg',
     text: 'Best platform for long term investments.',
-    rating: 4.7,
+    rating: 4.2,
     tags: ['Quick Setup'],
   },
   {

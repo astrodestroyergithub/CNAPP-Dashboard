@@ -39,6 +39,7 @@ const TestimonialModal = ({ name, image, text, tags, filledStars, onClose }) => 
             </div>
             <div className="testimonial-rating">
                 <ModalStarRating filledCount={filledStars} />
+                <div className="rating-fraction">{filledStars} / 5</div>
             </div>
           </div>
         </div>

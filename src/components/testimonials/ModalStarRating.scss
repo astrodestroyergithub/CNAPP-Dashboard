@@ -4,20 +4,41 @@ $stroke-width: 2;
 $stroke-linecap: round;
 $stroke-linejoin: round;
 
-.star-rating {
+.modal-star-rating {
     display: flex;
     gap: 6px;
-    stroke: $star-color;
-    stroke-width: $stroke-width;
 
-    .star {
+    .modal-star-wrapper {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .modal-star {
+        position: absolute;
+        top: 0;
+        left: 0;
         stroke: $star-color;
         stroke-width: $stroke-width;
         stroke-linecap: $stroke-linecap;
         stroke-linejoin: $stroke-linejoin;
+        fill: none;
+        width: 24px;
+        height: 24px;
+        transition: transform 0.2s;
 
         &.filled {
             fill: $star-color;
+        }
+
+        &.partial {
+            fill: none;
+
+            .modal-partial-fill {
+                fill: $star-color;
+                stroke: none;
+                pointer-events: none;
+            }
         }
 
         &.empty {
