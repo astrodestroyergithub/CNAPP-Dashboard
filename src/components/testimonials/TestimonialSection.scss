@@ -30,12 +30,13 @@
     animation: marquee 30s linear infinite;
 
     &:hover {
-      animation-play-state: paused; // Pause on hover if needed
+      animation-play-state: paused; 
     }
   }
 
   .testimonial-card {
-    display: flex;
+    display: grid;
+    grid-template-columns: 64px 3px 1fr;
     align-items: center;
     width: 200px;
     height: 110px;
@@ -54,11 +55,8 @@
     flex-shrink: 0;
 
     .testimonial-image {
-      flex: 1;
-      display: flex;
-      justify-content: center;
       align-items: center;
-      padding: 5px;
+      margin-top: 4px;
 
       img {
         width: 60px;
@@ -76,12 +74,31 @@
       margin: 0 5px; 
     }
 
-    .testimonial-text {
-      flex: 2;
-      font-size: 6px;
-      text-align: left;
-      padding-left: 3px;
-      color: #333;
+    .testimonial-review {
+      padding-left: 6px;
+
+      .testimonial-text {
+        font-size: 4px;
+        text-align: left;
+        padding-left: 3px;
+        color: #333;
+        height: 55px;
+
+        .read-more-link {
+          color: #007bff;
+          text-decoration: none;
+          font-weight: 500;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .testimonial-rating {
+        padding-left: 35px;
+      }
     }
   }
 }
