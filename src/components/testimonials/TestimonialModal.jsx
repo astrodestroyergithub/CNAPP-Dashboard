@@ -19,9 +19,9 @@ const TestimonialModal = ({ image, text, filledStars, onClose }) => {
 
           <div className="testimonial-right">
             <p className="testimonial-text">
-                {text.length > 938 ? (
+                {text.length > 1765 ? (
                       <>
-                        {text.slice(0, 938).concat('...')}
+                        {text.slice(0, 1765).concat('...')}
                       </>
                     ) : (
                       text
