@@ -66,6 +66,7 @@ const TestimonialSection = () => {
               <div className="testimonial-image">
                 <img src={item.image} alt="testimonial" />
               </div>
+              <div className="testimonial-vertical-divider"></div>
               <div className="testimonial-text">{item.text}</div>
             </div>
           ))}
