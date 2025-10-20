@@ -109,6 +109,7 @@
   color: #151515;
   justify-content: space-evenly;
   text-align: justify;
+  z-index: 12;
 }
 
 .testimonial-tags {
@@ -117,6 +118,7 @@
     align-items: center;
     justify-content: start;
     background: transparent;
+    z-index: 12;
     gap: 7px;
 
     .testimonial-tag {
@@ -159,7 +161,7 @@
 
 .quote-background-icon {
   position: absolute;
-  margin-left: 60%;
+  margin-left: 55%;
   margin-top: -7%;
   font-size: 220px;          
   color: rgba(0, 0, 0, 0.09); 
