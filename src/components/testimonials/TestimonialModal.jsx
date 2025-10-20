@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import './TestimonialModal.scss'
 import ModalStarRating from './ModalStarRating'
 import SocialBar from './SocialBar'
@@ -20,9 +22,11 @@ const TestimonialModal = ({ name, image, text, tags, filledStars, onClose }) => 
                 {name}
             </div>
           </div>
-
           <div className="testimonial-divider"></div>
-
+          <FontAwesomeIcon
+            icon={faQuoteLeft}
+            className="quote-background-icon"
+          />
           <div className="testimonial-right">
             <p className="testimonial-text">
                 {text.length > 1600 ? (

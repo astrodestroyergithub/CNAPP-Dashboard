@@ -107,6 +107,8 @@
   margin-top: 8px;
   font-size: 12px;
   color: #151515;
+  justify-content: space-evenly;
+  text-align: justify;
 }
 
 .testimonial-tags {
@@ -153,4 +155,16 @@
         color: #6a6868;
         margin-left: 15px;
     }
+}
+
+.quote-background-icon {
+  position: absolute;
+  margin-left: 60%;
+  margin-top: -7%;
+  font-size: 220px;          
+  color: rgba(0, 0, 0, 0.09); 
+  top: 20px;
+  left: 20px;
+  pointer-events: none;      
+  z-index: 0;
 }
