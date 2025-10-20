@@ -2,8 +2,10 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   isOpen: false,
+  name: '',
   image: '',
   text: '',
+  tags: [],
   filledStars: 0,
 }
 
@@ -12,16 +14,20 @@ const testimonialModalSlice = createSlice({
   initialState,
   reducers: {
     openModal: (state, action) => {
-      const { image, text, filledStars } = action.payload;
+      const { name, image, text, tags, filledStars } = action.payload;
       state.isOpen = true;
+      state.name = name;
       state.image = image;
       state.text = text;
+      state.tags = tags;
       state.filledStars = filledStars;
     },
     closeModal: (state) => {
       state.isOpen = false;
+      state.name = '';
       state.image = '';
       state.text = '';
+      state.tags = [];
       state.filledStars = 0;
     },
   },

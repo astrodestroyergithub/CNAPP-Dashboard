@@ -1,8 +1,8 @@
-.star-rating {
+.card-star-rating {
   display: flex;
   align-items: center;
 
-  .star {
+  .card-star {
     flex-shrink: 0;
     transition: transform 0.2s ease;
 

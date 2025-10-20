@@ -51,8 +51,10 @@
 .testimonial-left {
   flex: 0 0 200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 22px;
 }
 
 .testimonial-left:hover .image-wrapper img {
@@ -76,6 +78,12 @@
   }
 }
 
+.testimonial-candidate-name {
+    font-size: 18px;
+    text-align: center;
+    color: #111010;
+}
+
 .testimonial-divider {
   width: 10px;
   height: 100%;
@@ -87,13 +95,58 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
   margin-bottom: 18px;
 }
 
 .testimonial-text {
+  margin-top: 8px;
   font-size: 12px;
-  color: #222;
-  margin-bottom: 20px;
+  color: #151515;
+}
+
+.testimonial-tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background: transparent;
+    gap: 7px;
+
+    .testimonial-tag {
+        padding-inline: 5px;
+        padding-block: 3px;
+        background-color: #cfcece;
+        border-radius: 7px;
+        font-size: 8px;
+        color: #484747;
+        cursor: default;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            background-color: #d3d1d1;
+        }
+    }
+
+    .remaining-tags-indicator-text {
+        font-size: 10px;
+        color: #1f5eff;
+        cursor: default;
+
+        &:hover {
+            color: #7399f8;
+        }
+    }
+}
+
+.testimonial-rating {
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+
+    .rating-fraction {
+        font-size: 22px;
+        color: #6a6868;
+        margin-left: 15px;
+    }
 }
