@@ -2,6 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faTwitter,
+  faXTwitter,
   faFacebook,
   faInstagram,
   faLinkedin,
@@ -22,7 +23,7 @@ import './SocialBar.scss'
 
 const SocialBar = () => (
   <div className="social-bar">
-    <a href="#"><FontAwesomeIcon icon={faTwitter} className="social-icon"/></a>
+    <a href="#"><FontAwesomeIcon icon={faXTwitter} className="social-icon"/></a>
     <a href="#"><FontAwesomeIcon icon={faFacebook} className="social-icon"/></a>
     <a href="#"><FontAwesomeIcon icon={faLinkedin} className="social-icon"/></a>
     <a href="#"><FontAwesomeIcon icon={faInstagram} className="social-icon"/></a>
