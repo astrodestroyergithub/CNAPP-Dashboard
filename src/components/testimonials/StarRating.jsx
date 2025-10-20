@@ -20,9 +20,7 @@ const StarRating = ({ height, width, filledCount, gap }) => {
         >
           <polygon
             points="12,2 15,9 22,9 17,14 19,22 12,17 5,22 7,14 2,9 9,9"
-            fill={i < Math.round(filledCount) ? '#FFD700' : 'none'}
-            stroke="#FFD700"
-            strokeWidth="2"
+            className={`card-star-polygon ${i < Math.round(filledCount) ? "filled" : "empty"}`}
           />
         </svg>
       ))}
