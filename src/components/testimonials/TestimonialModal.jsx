@@ -8,7 +8,6 @@ const TestimonialModal = ({ name, image, text, tags, filledStars, onClose }) => 
     <div className="modal-overlay">
       <div className="testimonial-modal">
         <button className="close-button" onClick={onClose}>×</button>
-        
         <div className="testimonial-content">
           <div className="testimonial-left">
             <div className="social-media-handles-wrapper">
