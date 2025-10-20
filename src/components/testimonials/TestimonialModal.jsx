@@ -1,6 +1,7 @@
-import React from 'react';
-import './TestimonialModal.scss';
-import ModalStarRating from './ModalStarRating';
+import React from 'react'
+import './TestimonialModal.scss'
+import ModalStarRating from './ModalStarRating'
+import SocialBar from './SocialBar'
 
 const TestimonialModal = ({ name, image, text, tags, filledStars, onClose }) => {
   return (
@@ -10,6 +11,9 @@ const TestimonialModal = ({ name, image, text, tags, filledStars, onClose }) => 
         
         <div className="testimonial-content">
           <div className="testimonial-left">
+            <div className="social-media-handles-wrapper">
+                <SocialBar/>
+            </div>
             <div className="image-wrapper">
               <img src={image} alt="User" />
             </div>
@@ -45,7 +49,7 @@ const TestimonialModal = ({ name, image, text, tags, filledStars, onClose }) => 
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TestimonialModal;
+export default TestimonialModal

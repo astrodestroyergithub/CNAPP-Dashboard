@@ -1,0 +1,15 @@
+// Variables 
+$icon-color: #1f5eff;
+$icon-size: 10px;
+
+.social-icon {
+  color: $icon-color;
+  font-size: $icon-size;
+  margin-right: 8px;
+
+  &:hover {
+    color: #6d94f8;
+    transform: scale(1.8) rotate(10deg);
+    transition: transform .4s ease-in-out;
+  }
+}
