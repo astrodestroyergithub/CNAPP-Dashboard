@@ -1,33 +1,72 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-  faTwitter,
-  faXTwitter,
-  faFacebook,
-  faInstagram,
-  faLinkedin,
-  faGithub,
-  faYoutube,
-  faTiktok,
-  faSnapchat,
-  faPinterest,
-  faReddit,
-  faMedium,
-  faDiscord,
-  faDribbble,
-  faTwitch,
-  faWhatsapp,
-  faTelegram
-} from '@fortawesome/free-brands-svg-icons'
+import { faChevronRight, faWind } from '@fortawesome/free-solid-svg-icons'
 import './SocialBar.scss'
 
-const SocialBar = () => (
-  <div className="social-bar">
-    <a href="#"><FontAwesomeIcon icon={faXTwitter} className="social-icon"/></a>
-    <a href="#"><FontAwesomeIcon icon={faFacebook} className="social-icon"/></a>
-    <a href="#"><FontAwesomeIcon icon={faLinkedin} className="social-icon"/></a>
-    <a href="#"><FontAwesomeIcon icon={faInstagram} className="social-icon"/></a>
-  </div>
-)
+const SocialBar = ({socials}) => {
+  const [expanded, setExpanded] = useState(false);
+  const handleExpand = () => setExpanded(true);
+
+  return (
+    // <div className="social-bar">
+    //   {socials.length > 3 ? (
+    //     <>
+    //       {socials.slice(0,3).map((item) => (
+    //           <a href={item.link}><FontAwesomeIcon icon={item.icon} className="social-icon"/></a>
+    //         ))
+    //       }
+    //       <FontAwesomeIcon onClick={() => {console.log('More socials displayed')}} icon={faChevronRight} className="chevron-right-icon"/>
+    //     </>
+    //   ) : (
+    //     socials.map((item) => (
+    //       <a href={item.link}><FontAwesomeIcon icon={item.icon} className="social-icon"/></a>
+    //     ))
+    //   )}
+    // </div>
+
+    <>
+      {
+        !expanded ? ( /* Social media handles bar is in non-expanded state */
+          <div className="initial-social-bar">
+            {socials.length > 3 ? (
+              <>
+                {socials.slice(0,3).map((item) => (
+                    <a href={item.link}><FontAwesomeIcon icon={item.icon} className="initial-social-icon"/></a>
+                  ))
+                }
+                <FontAwesomeIcon onClick={handleExpand} icon={faChevronRight} className="initial-chevron-right-icon"/>
+              </>
+            ) : (
+              socials.map((item) => (
+                <a href={item.link}><FontAwesomeIcon icon={item.icon} className="initial-social-icon"/></a>
+              ))
+            )}
+          </div>
+        ) : ( /* Social media handles bar is in expanded state */
+          <div className={`social-bar ${expanded ? 'expanded' : ''}`}>
+            {socials.map((item, index) => (
+              <div className="icon-wrapper" key={item.link}>
+                {expanded && (
+                  <FontAwesomeIcon
+                    icon={faWind}
+                    className="wind-icon"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  />
+                )}
+                <a
+                  href={item.link}
+                  className={`social-link ${expanded ? 'animate' : ''}`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <FontAwesomeIcon icon={item.icon} className="social-icon" />
+                </a>
+              </div>
+            ))}
+          </div>
+        )
+      }
+    </>
+  )
+}
 
 export default SocialBar

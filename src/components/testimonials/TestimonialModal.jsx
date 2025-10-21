@@ -5,7 +5,7 @@ import './TestimonialModal.scss'
 import ModalStarRating from './ModalStarRating'
 import SocialBar from './SocialBar'
 
-const TestimonialModal = ({ name, image, text, tags, filledStars, onClose }) => {
+const TestimonialModal = ({ name, image, text, tags, socials, filledStars, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="testimonial-modal">
@@ -13,7 +13,7 @@ const TestimonialModal = ({ name, image, text, tags, filledStars, onClose }) => 
         <div className="testimonial-content">
           <div className="testimonial-left">
             <div className="social-media-handles-wrapper">
-                <SocialBar/>
+                <SocialBar socials={socials}/>
             </div>
             <div className="image-wrapper">
               <img src={image} alt="User" />
