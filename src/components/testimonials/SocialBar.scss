@@ -3,31 +3,6 @@ $socials-icon-color: #1f5eff;
 $more-icon-color: #a9a9a9;
 $icon-size: 10px;
 
-// .social-icon {
-//   color: $socials-icon-color;
-//   font-size: $icon-size;
-//   margin-right: 8px;
-
-//   &:hover {
-//     color: #6d94f8;
-//     transform: scale(1.8) rotate(10deg);
-//     transition: transform .4s ease-in-out;
-//   }
-// }
-
-// .chevron-right-icon {
-//   color: $more-icon-color;
-//   font-size: $icon-size;
-//   margin-right: 8px;
-//   cursor: pointer;
-
-//   &:hover {
-//     color: #d4d4d4;
-//     transform: scale(1.5);
-//     transition: transform .2s ease-in-out;
-//   }
-// }
-
 /* Non-expanded state */
 
 .initial-social-bar {
@@ -73,7 +48,6 @@ $icon-size: 10px;
   .social-link {
     opacity: 0;
     transform: translateX(-50px);
-    // animation-fill-mode: forwards;
     pointer-events: none;
 
     &.animate {
@@ -85,7 +59,6 @@ $icon-size: 10px;
   .social-icon {
     color: $socials-icon-color;
     font-size: $icon-size;
-    // margin-right: 8px;
     transition: transform 0.4s ease-in-out;
 
     &:hover {
@@ -96,7 +69,6 @@ $icon-size: 10px;
 
   .chevron-right-icon {
     cursor: pointer;
-    // margin-left: 8px;
 
     svg {
       font-size: 10px;

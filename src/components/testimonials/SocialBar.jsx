@@ -8,22 +8,6 @@ const SocialBar = ({socials}) => {
   const handleExpand = () => setExpanded(true);
 
   return (
-    // <div className="social-bar">
-    //   {socials.length > 3 ? (
-    //     <>
-    //       {socials.slice(0,3).map((item) => (
-    //           <a href={item.link}><FontAwesomeIcon icon={item.icon} className="social-icon"/></a>
-    //         ))
-    //       }
-    //       <FontAwesomeIcon onClick={() => {console.log('More socials displayed')}} icon={faChevronRight} className="chevron-right-icon"/>
-    //     </>
-    //   ) : (
-    //     socials.map((item) => (
-    //       <a href={item.link}><FontAwesomeIcon icon={item.icon} className="social-icon"/></a>
-    //     ))
-    //   )}
-    // </div>
-
     <>
       {
         !expanded ? ( /* Social media handles bar is in non-expanded state */
