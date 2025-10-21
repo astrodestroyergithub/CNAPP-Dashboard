@@ -175,8 +175,24 @@
     /* 1000px */
 
     .testimonial-text {
-        font-size: 9.2px;
+        font-size: 10.8px;
     }
+}
+
+@media (max-width: 57rem) {
+  /* 912px */
+
+  .testimonial-text {
+    font-size: 10.2px;
+  }
+}
+
+@media (max-width: 52rem) {
+  /* 832px */
+
+  .testimonial-text {
+    font-size: 9.2px;
+  }
 }
 
 @media(max-width: 48rem) {
