@@ -170,3 +170,19 @@
   pointer-events: none;      
   z-index: 0;
 }
+
+@media (max-width: 62.5rem) {
+    /* 1000px */
+
+    .testimonial-text {
+        font-size: 9.2px;
+    }
+}
+
+@media(max-width: 48rem) {
+  /* 768px */
+  
+  .modal-overlay {
+    display: none;
+  }
+}
