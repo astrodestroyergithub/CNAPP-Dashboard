@@ -1,15 +1,20 @@
-import React from 'react';
-import './TestimonialModal.scss';
-import ModalStarRating from './ModalStarRating';
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
+import './TestimonialModal.scss'
+import ModalStarRating from './ModalStarRating'
+import SocialBar from './SocialBar'
 
 const TestimonialModal = ({ name, image, text, tags, filledStars, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="testimonial-modal">
         <button className="close-button" onClick={onClose}>×</button>
-        
         <div className="testimonial-content">
           <div className="testimonial-left">
+            <div className="social-media-handles-wrapper">
+                <SocialBar/>
+            </div>
             <div className="image-wrapper">
               <img src={image} alt="User" />
             </div>
@@ -17,9 +22,11 @@ const TestimonialModal = ({ name, image, text, tags, filledStars, onClose }) => 
                 {name}
             </div>
           </div>
-
           <div className="testimonial-divider"></div>
-
+          <FontAwesomeIcon
+            icon={faQuoteLeft}
+            className="quote-background-icon"
+          />
           <div className="testimonial-right">
             <p className="testimonial-text">
                 {text.length > 1600 ? (
@@ -45,7 +52,7 @@ const TestimonialModal = ({ name, image, text, tags, filledStars, onClose }) => 
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TestimonialModal;
+export default TestimonialModal

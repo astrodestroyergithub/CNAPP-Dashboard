@@ -1,3 +1,7 @@
+// Variables
+$stroke: #FFD700;
+$stroke-width: 2;
+
 .card-star-rating {
   display: flex;
   align-items: center;
@@ -8,6 +12,19 @@
 
     &:hover {
       transform: scale(1.05);
+    }
+
+    .card-star-polygon {
+      stroke: $stroke;
+      stroke-width: $stroke-width;
+
+      &.filled {
+        fill: $stroke;
+      }
+
+      &.empty {
+        fill: none;
+      }
     }
   }
 }
