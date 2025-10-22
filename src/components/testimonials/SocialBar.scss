@@ -32,6 +32,23 @@ $icon-size: 10px;
   }
 }
 
+.copy-icon {
+  color: $more-icon-color;
+  font-size: $icon-size;
+  margin-right: 8px;
+  cursor: pointer;
+
+  &.expanded {
+    margin-bottom: -3.62px;
+  }
+
+  &:hover {
+    color: #d4d4d4;
+    transform: scale(1.5);
+    transition: transform .2s ease-in-out;
+  }
+}
+
 /* Expanded state */
 
 .social-bar {
