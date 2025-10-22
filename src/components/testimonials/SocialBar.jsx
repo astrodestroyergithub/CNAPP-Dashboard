@@ -12,9 +12,9 @@ const SocialBar = ({socials}) => {
       {
         !expanded ? ( /* Social media handles bar is in non-expanded state */
           <div className="initial-social-bar">
-            {socials.length > 3 ? (
+            {socials.length > 2 ? (
               <>
-                {socials.slice(0,3).map((item) => (
+                {socials.slice(0,2).map((item) => (
                     <a href={item.link}><FontAwesomeIcon icon={item.icon} className="initial-social-icon"/></a>
                   ))
                 }
