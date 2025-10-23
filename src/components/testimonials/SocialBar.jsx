@@ -24,7 +24,7 @@ const SocialBar = ({socials}) => {
     // For simulating error while copying
     /* navigator.clipboard.writeText = () => {
       return Promise.reject(new Error("Clipboard write failed (simulated)"));
-    }; */ 
+    }; */
 
     navigator.clipboard.writeText(text)
     .then(() => {
