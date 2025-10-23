@@ -1,4 +1,23 @@
 import { useDispatch, useSelector } from 'react-redux'
+import { 
+  faTwitter,
+  faXTwitter,
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faGithub,
+  faYoutube,
+  faTiktok,
+  faSnapchat,
+  faPinterest,
+  faReddit,
+  faMedium,
+  faDiscord,
+  faDribbble,
+  faTwitch,
+  faWhatsapp,
+  faTelegram
+} from '@fortawesome/free-brands-svg-icons'
 import StarRating from './StarRating'
 import { openModal, closeModal } from '../../store/testimonialModalSlice'
 import TestimonialModal from './TestimonialModal'
@@ -12,14 +31,43 @@ const testimonials = [
     text: "CNAPP's insights helped me make smarter investment decisions.",
     rating: 3,
     tags: ['Customer Love', 'Ease of Use'],
+    socials: [
+      {
+        name: 'Facebook',
+        icon: faFacebook,
+        link: '#',
+      },
+      {
+        name: 'X',
+        icon: faXTwitter,
+        link: "#",
+      }  
+    ],
   },
   {
     id: 2,
-    name: 'Lisa Haddidi',
+    name: 'Lisa Haddidi Ali Asgar Khalifa',
     image: 'https://photosmint.com/wp-content/uploads/2025/03/Hot-Girls-Dp.jpeg',
     text: 'User-friendly interface and extremely efficient support!',
     rating: 4.3,
     tags: ['Quick Setup'],
+    socials: [
+      {
+        name: 'GitHub',
+        icon: faGithub,
+        link: '#',
+      },
+      {
+        name: 'TikTok',
+        icon: faTiktok,
+        link: "#",
+      },
+      {
+        name: 'YouTube',
+        icon: faYoutube,
+        link: "#",
+      },    
+    ],
   },
   {
     id: 3,
@@ -28,6 +76,7 @@ const testimonials = [
     text: 'Everything I need for research and analysis is in one place.',
     rating: 4,
     tags: ['Customer Love'],
+    socials: [],
   },
   {
     id: 4,
@@ -36,6 +85,7 @@ const testimonials = [
     text: 'Absolutely love how CNAPP tailors insights based on my behavior.',
     rating: 2.5,
     tags: ['Quick Setup', 'Ease of Use'],
+    socials: [],
   },
   {
     id: 5,
@@ -44,6 +94,7 @@ const testimonials = [
     text: 'Clean layout and valuable recommendations — highly recommended!',
     rating: 5,
     tags: ['Customer Love'],
+    socials: [],
   },
   {
     id: 6,
@@ -52,6 +103,7 @@ const testimonials = [
     text: 'My go-to platform for everything investment related.',
     rating: 4,
     tags: ['Ease of Use', 'Quick Setup'],
+    socials: [],
   },
   {
     id: 7,
@@ -60,6 +112,7 @@ const testimonials = [
     text: 'I could take a maternity break after making huge profits.',
     rating: 3.3,
     tags: ['Customer Love', 'User Friendly'],
+    socials: [],
   },
   {
     id: 8,
@@ -68,6 +121,7 @@ const testimonials = [
     text: 'At 27, my portfolio has grown to $2M!',
     rating: 4.5,
     tags: ['Ease of Use'],
+    socials: [],
   },
   {
     id: 9,
@@ -76,6 +130,7 @@ const testimonials = [
     text: 'Best platform for long term investments.',
     rating: 4.2,
     tags: ['Quick Setup'],
+    socials: [],
   },
   {
     id: 10,
@@ -84,20 +139,49 @@ const testimonials = [
     text: 'Fast, interactive web platform. Excellent options for GTT, ATO alerts etc.',
     rating: 5,
     tags: ['User Friendly'],
+    socials: [],
   },
   {
     id: 11,
-    name: 'Tom Cruise John Clemenson Jr.',
+    name: 'Tom Cruise',
     image: 'https://m.media-amazon.com/images/I/51BMaDP4L2L._AC_UF894,1000_QL80_.jpg',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.',
     rating: 4.4,
     tags: ['Customer Love', 'Ease of Use', 'User Friendly', 'Quick Setup', 'Great Customer Support'],
+    socials: [
+      {
+        name: 'X',
+        icon: faXTwitter,
+        link: "#",
+      },
+      {
+        name: 'Facebook',
+        icon: faFacebook,
+        link: "#",
+      },
+      {
+        name: 'LinkedIn',
+        icon: faLinkedin,
+        link: "#",
+      },
+      {
+        name: 'Instagram',
+        icon: faInstagram,
+        link: "#",
+      },
+      {
+        name: 'Pinterest',
+        icon: faPinterest,
+        link: "#",
+      }
+    ],
   }
 ]
 
 const TestimonialSection = () => {
   const dispatch = useDispatch()
-  const { isOpen, name, image, text, tags, filledStars } = useSelector((state) => state.testimonialModal)
+  const { isOpen, name, image, text, tags, socials, filledStars } = useSelector((state) => state.testimonialModal)
+
   return (
     <>
       <section className="testimonial-section">
@@ -107,7 +191,7 @@ const TestimonialSection = () => {
         <div className="marquee-wrapper">
           <div className="marquee-content">
             {testimonials.map((item) => (
-              <div key={item.id} onClick={() => {dispatch(openModal({name: item.name, image: item.image, text: item.text, tags: item.tags, filledStars: item.rating}))}} className="testimonial-card">
+              <div key={item.id} onClick={() => {dispatch(openModal({name: item.name, image: item.image, text: item.text, tags: item.tags, socials: item.socials, filledStars: item.rating}))}} className="testimonial-card">
                 <div className="testimonial-image">
                   <img src={item.image} alt="testimonial" />
                 </div>
@@ -116,7 +200,7 @@ const TestimonialSection = () => {
                   <div className="testimonial-text">
                     {item.text.length > 70 ? (
                       <p>
-                        {item.text.slice(0, 57).concat('... ')}<div onClick={() => {dispatch(openModal({name: item.name, image: item.image, text: item.text, tags: item.tags, filledStars: item.rating}))}} className="read-more-link">Read more</div>
+                        {item.text.slice(0, 57).concat('... ')}<div onClick={() => {dispatch(openModal({name: item.name, image: item.image, text: item.text, tags: item.tags, socials: item.socials, filledStars: item.rating}))}} className="read-more-link">Read more</div>
                       </p>
                     ) : (
                       item.text
@@ -137,6 +221,7 @@ const TestimonialSection = () => {
           image={image}
           text={text}
           tags={tags}
+          socials={socials}
           filledStars={filledStars}
           onClose={() => dispatch(closeModal())}
         />

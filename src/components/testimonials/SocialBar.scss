@@ -1,15 +1,139 @@
 // Variables 
-$icon-color: #1f5eff;
+$socials-icon-color: #1f5eff;
+$more-icon-color: #a9a9a9;
 $icon-size: 10px;
 
-.social-icon {
-  color: $icon-color;
+/* Non-expanded state */
+
+.initial-social-bar {
+  .initial-social-icon {
+    color: $socials-icon-color;
+    font-size: $icon-size;
+    margin-right: 8px;
+
+    &:hover {
+      color: #6d94f8;
+      transform: scale(1.8) rotate(10deg);
+      transition: transform .4s ease-in-out;
+    }
+  }
+
+  .initial-chevron-right-icon {
+    color: $more-icon-color;
+    font-size: $icon-size;
+    margin-right: 8px;
+    cursor: pointer;
+
+    &:hover {
+      color: #d4d4d4;
+      transform: scale(1.5);
+      transition: transform .2s ease-in-out;
+    }
+  }
+}
+
+.copy-icon {
+  color: $more-icon-color;
   font-size: $icon-size;
   margin-right: 8px;
+  cursor: pointer;
+
+  &.expanded {
+    margin-bottom: -3.62px;
+  }
 
   &:hover {
-    color: #6d94f8;
-    transform: scale(1.8) rotate(10deg);
-    transition: transform .4s ease-in-out;
+    color: #d4d4d4;
+    transform: scale(1.5);
+    transition: transform .2s ease-in-out;
+  }
+}
+
+/* Expanded state */
+
+.social-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  overflow: visible;
+
+  .icon-wrapper {
+    position: relative;
+  }
+
+  .social-link {
+    opacity: 0;
+    transform: translateX(-50px);
+    pointer-events: none;
+
+    &.animate {
+      animation: rushOutElastic 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+      pointer-events: auto;
+    }
+  }
+
+  .social-icon {
+    color: $socials-icon-color;
+    font-size: $icon-size;
+    transition: transform 0.4s ease-in-out;
+
+    &:hover {
+      color: #6d94f8;
+      transform: scale(1.8) rotate(10deg);
+    }
+  }
+
+  .chevron-right-icon {
+    cursor: pointer;
+
+    svg {
+      font-size: 10px;
+      color: #555;
+    }
+  }
+
+  .wind-icon {
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    color: #a7c4ff;
+    font-size: 9px;
+    opacity: 0;
+    animation: windSwirl 0.7s ease-out forwards;
+    pointer-events: none;
+  }
+}
+
+@keyframes rushOutElastic {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(20px) scale(1.1);
+  }
+  80% {
+    transform: translateX(-8px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes windSwirl {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px) rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+    transform: translateX(10px) rotate(20deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(30px) rotate(45deg);
   }
 }

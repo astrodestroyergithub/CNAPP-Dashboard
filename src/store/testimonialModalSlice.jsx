@@ -6,6 +6,7 @@ const initialState = {
   image: '',
   text: '',
   tags: [],
+  socials: [],
   filledStars: 0,
 }
 
@@ -14,12 +15,13 @@ const testimonialModalSlice = createSlice({
   initialState,
   reducers: {
     openModal: (state, action) => {
-      const { name, image, text, tags, filledStars } = action.payload;
+      const { name, image, text, tags, socials, filledStars } = action.payload;
       state.isOpen = true;
       state.name = name;
       state.image = image;
       state.text = text;
       state.tags = tags;
+      state.socials = socials;
       state.filledStars = filledStars;
     },
     closeModal: (state) => {
@@ -28,6 +30,7 @@ const testimonialModalSlice = createSlice({
       state.image = '';
       state.text = '';
       state.tags = [];
+      state.socials = [];
       state.filledStars = 0;
     },
   },
