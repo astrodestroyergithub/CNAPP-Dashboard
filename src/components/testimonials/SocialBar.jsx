@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faWind, faCopy } from '@fortawesome/free-solid-svg-icons'
 import Tooltip from '@mui/material/Tooltip'
@@ -15,7 +15,6 @@ const SocialBar = ({socials}) => {
   const [copyErrorToasterState, setCopyErrorToasterState] = useState(false)
   const [copyErrorToasterMessage, setCopyErrorToasterMessage] = useState()
 
-  const dispatch = useDispatch()
   const { name, text } = useSelector((state) => state.testimonialModal)
 
   const handleExpand = () => setExpanded(true)
