@@ -102,7 +102,7 @@ const SocialBar = ({socials}) => {
           </div>
         ) : ( /* Social media handles bar is in expanded state */
           <div className={`social-bar ${expanded ? 'expanded' : ''}`}>
-            {socials.map((item, index) => (
+            {socials.slice(0,7).map((item, index) => (
               <div className="icon-wrapper" key={item.link}>
                 {expanded && (
                   <FontAwesomeIcon
