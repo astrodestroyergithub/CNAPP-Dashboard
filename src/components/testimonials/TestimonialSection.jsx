@@ -139,7 +139,68 @@ const testimonials = [
     text: 'Fast, interactive web platform. Excellent options for GTT, ATO alerts etc.',
     rating: 5,
     tags: ['User Friendly'],
-    socials: [],
+    socials: [
+      {
+        name: 'X',
+        icon: faXTwitter,
+        link: "#",
+      },
+      {
+        name: 'Facebook',
+        icon: faFacebook,
+        link: "#",
+      },
+      {
+        name: 'LinkedIn',
+        icon: faLinkedin,
+        link: "#",
+      },
+      {
+        name: 'Instagram',
+        icon: faInstagram,
+        link: "#",
+      },
+      {
+        name: 'Pinterest',
+        icon: faPinterest,
+        link: "#",
+      },
+      {
+        name: 'TikTok',
+        icon: faTiktok,
+        link: "#",
+      },
+      {
+        name: 'Snapchat',
+        icon: faSnapchat,
+        link: "#",
+      },
+      {
+        name: 'WhatsApp',
+        icon: faWhatsapp,
+        link: "#",
+      },
+      {
+        name: 'Telegram',
+        icon: faTelegram,
+        link: "#",
+      },
+      {
+        name: 'Reddit',
+        icon: faReddit,
+        link: "#",
+      },
+      {
+        name: 'Medium',
+        icon: faMedium,
+        link: "#",
+      },
+      {
+        name: 'GitHub',
+        icon: faGithub,
+        link: "#",
+      }
+    ],
   },
   {
     id: 11,
