@@ -9,7 +9,6 @@ const Blogs = () => {
       <section className="section">
         <div>
           <p>Blogs</p>
-          <Link to="/">Home</Link>
         </div>
       </section>
       <Footer/>
