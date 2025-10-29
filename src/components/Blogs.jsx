@@ -6,7 +6,7 @@ const Blogs = () => {
   return (
     <>
       <Header pageName={'Blogs'} />
-      <section className="section">
+      <section className="blogs-container">
         <div>
           <p>Blogs</p>
         </div>
