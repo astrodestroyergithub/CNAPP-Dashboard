@@ -1,6 +1,6 @@
-import Header from './Header'
-import Footer from './Footer'
-import WorkInProgress from './wip/WorkInProgress'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+import WorkInProgress from '../../components/wip/WorkInProgress'
 
 const Blogs = () => {
   return (

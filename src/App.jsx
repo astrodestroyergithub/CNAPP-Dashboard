@@ -5,7 +5,7 @@ import { initialize } from './store/dashboardSlice';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import CNAPPDashboard from './components/CNAPPDashboard';
 import Portfolio from './components/Portfolio';
-import Blogs from './components/Blogs';
+import Blogs from './pages/blogs/Blogs';
 import Tips from './components/Tips';
 import Home from './components/Home';
 
