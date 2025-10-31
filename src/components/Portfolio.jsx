@@ -1,14 +1,14 @@
 import Header from './Header'
 import Footer from './Footer'
+import WorkInProgress from './wip/WorkInProgress'
 import { Link } from 'react-router-dom'
 
 const Portfolio = () => {
   return (
     <>
       <Header pageName={'Portfolio'} />
-      <div>
-        <p>Portfolio</p>
-        <Link to="/">Home</Link>
+      <div className="portfolio-container">
+        <WorkInProgress/>
       </div>
       <Footer/>
     </>

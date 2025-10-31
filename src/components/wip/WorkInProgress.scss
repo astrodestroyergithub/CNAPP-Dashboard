@@ -1,0 +1,28 @@
+// Variables
+$accent: #1f5eff;
+$text-chrome: #fff;
+$no-chrome: #000;
+
+.wip-wrapper {
+    display: flex;
+    margin-block: 20px;
+    align-items: center;
+    justify-content: center;
+
+    .work-in-progress-container {
+        background-color: $accent;
+        width: 70%;
+        height: auto;
+        padding: 5em;
+        border-radius: 8px;
+        border: 1px solid $no-chrome;
+        text-align: center;
+        
+        .work-in-progress-text {
+            background: transparent;
+            font-size: small;
+            color: $text-chrome;
+            font-weight: bold;
+        }
+    }
+}
