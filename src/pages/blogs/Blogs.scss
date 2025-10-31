@@ -1,0 +1,131 @@
+// Variables
+$bg-basic: #f1f2f4;
+$no-chrome: #000;
+
+.blogs-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 54vw; 
+  background-color: none;
+  margin: 0 auto;
+  padding-block-start: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  color: #222;
+}
+
+.blogs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 44px;
+  width: 100%;
+}
+
+.blog-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: row; 
+  height: 300px; 
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-image-container {
+  width: 50%; 
+  height: 100%; 
+}
+
+.blog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-content {
+  width: 50%; 
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-title {
+  font-size: 14px; 
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.blog-excerpt {
+  font-size: 9px; 
+  color: #555;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 7; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.blog-tags {
+  margin-top: 1rem;
+  font-size: 8px;
+  color: #777;
+}
+
+.blog-tag {
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 5px;
+  margin-right: 4px;
+}
+
+.blog-category {
+  margin-top: 0.5rem;
+  font-size: 10px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .blogs-page {
+    width: 90vw; 
+  }
+
+  .blog-card {
+    flex-direction: column; 
+    height: auto;
+  }
+
+  .blog-image-container,
+  .blog-content {
+    width: 100%; 
+  }
+
+  .blog-title {
+    font-size: 12px;
+  }
+  
+  .blog-excerpt {
+    font-size: 8px;
+  }
+
+  .blog-tags {
+    font-size: 7px;
+  }
+
+  .blog-category {
+    font-size: 9px;
+  }
+}
