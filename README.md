@@ -1,5 +1,5 @@
-# CNAPP Dashboard
-The CNAPP Dashboard is a customizable interface that lets users explore categories, add or remove widgets, and search for specific tools. It offers a flexible way to organize and view key information, adapting to user preferences for quick insights and a streamlined, personalized experience.
+# CnApp (Cross Network Advanced Portfolio Platform)
+The CnApp (Cross-Network Advanced Portfolio Platform) is a customizable interface that lets users explore categories, add or remove widgets, and search for specific tools. It offers a flexible way to organize and view key information, adapting to user preferences for quick insights and a streamlined, personalized experience.
 
 **To run the dashboard application, follow these steps:**
 1. First of all clone the git repository by copying the HTTPS/SSH url of the repo, and then executing the below commmand in git bash:
@@ -42,4 +42,4 @@ The application will open automatically in your default browser at [http://local
   set PORT=3001 && npm start  (macOS/Linux)
 ```
 
-**View Live Website:** [CNAPP Dashboard](https://cnapp-dashboard-tamojit-roy.netlify.app/)
+**View Live Website:** [CnApp](https://cnapp-dashboard-tamojit-roy.netlify.app/)
