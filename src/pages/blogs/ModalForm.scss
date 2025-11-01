@@ -1,0 +1,88 @@
+$theme-color: #1f5eff;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-container {
+  background-color: white;
+  padding: 9px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 15px;
+  color: $theme-color;
+}
+
+.modal-form label {
+  font-weight: bold;
+  font-size: 12px;
+  color: #333;
+}
+
+.modal-form input,
+.modal-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.modal-form input:focus,
+.modal-form textarea:focus {
+  border-color: $theme-color;
+  outline: none;
+}
+
+.modal-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.submit-btn {
+  background-color: $theme-color;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: darken($theme-color, 10%);
+}
+
+.close-btn {
+  background-color: #ccc;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  align-self: center;
+}
+
+.close-btn:hover {
+  background-color: darken(#ccc, 10%);
+}
