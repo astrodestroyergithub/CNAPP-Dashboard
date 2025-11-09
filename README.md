@@ -1,5 +1,5 @@
-# CnApp (Cross Network Advanced Portfolio Platform)
-The CnApp (Cross-Network Advanced Portfolio Platform) is a customizable interface that lets users explore categories, add or remove widgets, and search for specific tools. It offers a flexible way to organize and view key information, adapting to user preferences for quick insights and a streamlined, personalized experience.
+# CnApp-leur (Cross Network Advanced Portfolio Platform for Leveraged and Enhanced Utilization of Resources)
+The CnApp-leur (Cross Network Advanced Portfolio Platform for Leveraged and Enhanced Utilization of Resources) or Snapleur {pronounced: /si.ne a.plœʁ/} is a customizable interface that lets users explore categories, add or remove widgets, and search for specific tools. It offers a flexible way to organize and view key information, adapting to user preferences for quick insights and a streamlined, personalized experience.
 
 **To run the dashboard application, follow these steps:**
 1. First of all clone the git repository by copying the HTTPS/SSH url of the repo, and then executing the below commmand in git bash:
