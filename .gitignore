@@ -14,6 +14,11 @@
 # production
 /build
 
+# files
+blog.csv
+complete_blog_inserts.sql
+generate_sql.py
+
 # misc
 .DS_Store
 .env.local
