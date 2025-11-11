@@ -36,7 +36,9 @@ const Blogs = () => {
               <div className="blog-content">
                 <h2 className="blog-title">{blog.title}</h2>
                 <p className="blog-excerpt">
-                  {blog.excerpt}
+                  <pre>
+                    {blog.excerpt}
+                  </pre>
                 </p>
                 {
                   blog.tags !== null && 
