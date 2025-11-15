@@ -155,3 +155,30 @@ $no-chrome: #000;
     font-size: 9px;
   }
 }
+
+.blog-header-buttons {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 10px;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-wrap: break-word;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ddd;
+}
+
+.blog-scroll-btn {
+  padding: 2px 3.33px;
+  font-size: 7px;
+  border: 0.5px solid #888;
+  border-radius: 4px;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+.blog-scroll-btn:hover {
+  background: #f8d08a;
+}

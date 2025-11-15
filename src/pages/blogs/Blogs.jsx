@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import ModalForm from './ModalForm'
+import BackToTopButton from './BackToTopButton'
 import './Blogs.scss'
 
 const Blogs = () => {
@@ -10,6 +11,15 @@ const Blogs = () => {
 
   const openModal = () => setShowModal(true);
   const closeModal = () => setShowModal(false);
+
+  const cardRefs = useRef({});
+
+  const scrollToCard = (id) => {
+    const card = cardRefs.current[id];
+    if (card) {
+      card.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   useEffect(() => {
     fetch(`${process.env.REACT_APP_CNAPP_DATA_SERVICE_BASE_URL}/data/gks`)
@@ -25,11 +35,22 @@ const Blogs = () => {
   return (
     <>
       <Header pageName={'Blogs'} />
+      <div className="blog-header-buttons">
+        {blogs.map((blog) => (
+          <button
+            key={blog.id}
+            onClick={() => scrollToCard(blog.id)}
+            className="blog-scroll-btn"
+          >
+            {blog.qno}
+          </button>
+        ))}
+      </div>
       <div className="blogs-page">
         <h1 className="page-title">Latest GKs</h1>
         <div className="blogs-container">
           {blogs.map((blog) => (
-            <div key={blog.id} className="blog-card">
+            <div key={blog.id} className="blog-card" ref={(el) => (cardRefs.current[blog.id] = el)}>
               <div className="blog-image-container">
                 <img src={blog.imageUrl} alt={blog.qno} className="blog-image" />
               </div>
@@ -69,6 +90,7 @@ const Blogs = () => {
           {showModal && <ModalForm closeModal={closeModal} />}
         </div>
       </div>
+      <BackToTopButton />
       <Footer/>
     </>
   )
