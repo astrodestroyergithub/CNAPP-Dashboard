@@ -18,6 +18,9 @@
 blog.csv
 complete_blog_inserts.sql
 generate_sql.py
+complete_blog_inserts (2).sql
+complete_gk_qnas_inserts.sql
+generate_sql (2).py
 
 # misc
 .DS_Store
