@@ -12,7 +12,7 @@ const Blogs = () => {
   const closeModal = () => setShowModal(false);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_CNAPP_DATA_SERVICE_BASE_URL}/data/blogs`)
+    fetch(`${process.env.REACT_APP_CNAPP_DATA_SERVICE_BASE_URL}/data/gks`)
     .then(response => response.json())
     .then(data => {
         setBlogs(data);
@@ -26,22 +26,22 @@ const Blogs = () => {
     <>
       <Header pageName={'Blogs'} />
       <div className="blogs-page">
-        <h1 className="page-title">Latest Blogs</h1>
+        <h1 className="page-title">Latest GKs</h1>
         <div className="blogs-container">
           {blogs.map((blog) => (
             <div key={blog.id} className="blog-card">
               <div className="blog-image-container">
-                <img src={blog.imageUrl} alt={blog.title} className="blog-image" />
+                <img src={blog.imageUrl} alt={blog.qno} className="blog-image" />
               </div>
               <div className="blog-content">
-                <h2 className="blog-title">{blog.title}</h2>
+                <h2 className="blog-title">{blog.qno}</h2>
                 {/* <p className="blog-excerpt">
                   {blog.excerpt}
                 </p> */}
                 <p
                   className="blog-excerpt"
                   dangerouslySetInnerHTML={{
-                    __html: blog.excerpt.replace(/\n/g, "<br />")
+                    __html: blog.ques.replace(/\n/g, "<br />")
                   }}
                 ></p>
                 {
@@ -55,9 +55,9 @@ const Blogs = () => {
                     </div>
                 }
                 {
-                  blog.category != "" && 
+                  blog.ans != "" && 
                     <div className="blog-category">
-                      <strong>Category:</strong> {blog.category}
+                      <strong>Ans:</strong> {blog.ans}
                     </div>
                 }
               </div>

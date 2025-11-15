@@ -4,10 +4,10 @@ import './ModalForm.scss'
 const ModalForm = ({ closeModal }) => {
   const [formData, setFormData] = useState({
     imageUrl: '',
-    title: '',
-    excerpt: '',
+    qno: '',
+    ques: '',
     tags: null,
-    category: ''
+    ans: ''
   })
 
   const handleInputChange = (e) => {
@@ -23,14 +23,14 @@ const ModalForm = ({ closeModal }) => {
 
     const postData = {
       imageUrl: formData.imageUrl,
-      title: formData.title,
-      excerpt: formData.excerpt,
+      qno: formData.qno,
+      ques: formData.ques,
       tags: formData.tags ? formData.tags.split(',').map(tag => tag.trim()) : null,
-      category: formData.category
+      ans: formData.ans
     }
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_CNAPP_DATA_SERVICE_BASE_URL}/data/add-blog`, {
+      const response = await fetch(`${process.env.REACT_APP_CNAPP_DATA_SERVICE_BASE_URL}/data/add-gk`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,11 +39,11 @@ const ModalForm = ({ closeModal }) => {
       })
 
       if (response.ok) {
-        console.log('Blog Post Created!')
+        console.log('GK Created!')
         closeModal()
         window.location.reload()
       } else {
-        console.log('Error creating blog post!')
+        console.log('Error creating gk post!')
       }
     } catch (error) {
       console.error('Error submitting form:', error)
@@ -66,21 +66,21 @@ const ModalForm = ({ closeModal }) => {
             required
           />
 
-          <label htmlFor="title">Blog Title:</label>
+          <label htmlFor="qno">GK qno:</label>
           <input
             type="text"
-            id="title"
-            name="title"
-            value={formData.title}
+            id="qno"
+            name="qno"
+            value={formData.qno}
             onChange={handleInputChange}
             required
           />
 
-          <label htmlFor="excerpt">Blog Excerpt:</label>
+          <label htmlFor="ques">GK ques:</label>
           <textarea
-            id="excerpt"
-            name="excerpt"
-            value={formData.excerpt}
+            id="ques"
+            name="ques"
+            value={formData.ques}
             onChange={handleInputChange}
             required
           ></textarea>
@@ -94,12 +94,12 @@ const ModalForm = ({ closeModal }) => {
             onChange={handleInputChange}
           />
 
-          <label htmlFor="category">Category:</label>
+          <label htmlFor="ans">ans:</label>
           <input
             type="text"
-            id="category"
-            name="category"
-            value={formData.category}
+            id="ans"
+            name="ans"
+            value={formData.ans}
             onChange={handleInputChange}
             required
           />
