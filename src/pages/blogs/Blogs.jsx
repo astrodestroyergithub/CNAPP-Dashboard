@@ -35,9 +35,12 @@ const Blogs = () => {
               </div>
               <div className="blog-content">
                 <h2 className="blog-title">{blog.title}</h2>
-                <p className="blog-excerpt">
-                  {blog.excerpt}
-                </p>
+                <p
+                  className="blog-excerpt"
+                  dangerouslySetInnerHTML={{
+                    __html: blog.excerpt.replace(/\n/g, "<br />")
+                  }}
+                ></p>
                 {
                   blog.tags !== null && 
                     <div className="blog-tags">
