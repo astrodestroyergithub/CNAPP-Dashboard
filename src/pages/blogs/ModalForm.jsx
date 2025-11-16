@@ -54,7 +54,7 @@ const ModalForm = ({ closeModal }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-container">
-        <h2>Create New Blog Post</h2>
+        <h2>Create New GK Card</h2>
         <form onSubmit={handleSubmit} className="modal-form">
           <label htmlFor="imageUrl">Image URL:</label>
           <input
