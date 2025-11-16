@@ -66,7 +66,7 @@ const ModalForm = ({ closeModal }) => {
             required
           />
 
-          <label htmlFor="qno">GK qno:</label>
+          <label htmlFor="qno">GK Question No:</label>
           <input
             type="text"
             id="qno"
@@ -76,7 +76,7 @@ const ModalForm = ({ closeModal }) => {
             required
           />
 
-          <label htmlFor="ques">GK ques:</label>
+          <label htmlFor="ques">GK Question:</label>
           <textarea
             id="ques"
             name="ques"
@@ -85,7 +85,7 @@ const ModalForm = ({ closeModal }) => {
             required
           ></textarea>
 
-          <label htmlFor="tags">Tags (comma-separated):</label>
+          <label htmlFor="tags">Tags ("," separated):</label>
           <input
             type="text"
             id="tags"
@@ -94,7 +94,7 @@ const ModalForm = ({ closeModal }) => {
             onChange={handleInputChange}
           />
 
-          <label htmlFor="ans">ans:</label>
+          <label htmlFor="ans">Answer:</label>
           <input
             type="text"
             id="ans"
