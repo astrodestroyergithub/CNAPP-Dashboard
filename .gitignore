@@ -22,6 +22,7 @@ complete_blog_inserts (2).sql
 generate_sql (2).py
 complete_gk_qnas_inserts.sql
 general_awareness_16-11-2025.sql
+secrets_keys.yml
 
 # misc
 .DS_Store
