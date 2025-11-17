@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import ModalForm from './ModalForm'
 import BackToTopButton from './BackToTopButton'
+import SummaryInputBox from './AIResponseBox/SummaryInputBox'
 import './Blogs.scss'
 
 const Blogs = () => {
@@ -46,6 +47,7 @@ const Blogs = () => {
           </button>
         ))}
       </div>
+      <SummaryInputBox blogs={blogs} />
       <div className="blogs-page">
         <h1 className="page-title">Latest GKs</h1>
         <div className="blogs-container">
