@@ -61,6 +61,8 @@ export default function SummaryInputBox({ blogs }) {
       selectedGKContent.push(`Question: ${gk.ques}\nAnswer: ${gk.ans}`);
     });
 
+    console.log(selectedGKContent.reduce((acc, val) => acc + "\n\n" + val));
+
     const prompt = `Generate a concise summary for the following General Knowledge Q&A pairs. Make sure to exclude any special characters or formattings and provide the summary in a single paragraph with human readable sentences. Be precise, concise and straight to the point. Remember that the summary is intended for last minute revision only. The 20 Q&A pairs are given below:\n\n${selectedGKContent.reduce((acc, val) => acc + "\n\n" + val)}`;
 
     /* let response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
